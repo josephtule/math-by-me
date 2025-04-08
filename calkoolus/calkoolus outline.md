@@ -15,8 +15,8 @@
     - [ ] Even/Odd
     - [ ] Increasing/Decreasing
     - [ ] Periodic
-- [ ] Chapter 2 - Special Functions and Inequalities (Review)
-  - [ ] Linear Functions and inequalities
+- [ ] Chapter 2 - Special Functions (Review)
+  - [ ] Linear Functions 
   - [ ] Quadratic Functions
   - [ ] Polynomial and Rational Functions
   - [ ] Exponential and Logarithmic Functions
@@ -25,7 +25,7 @@
 - [ ] Chapter 3 - Analytic Geometry (Review)
   - [ ] Conic Sections
   - [ ] Parametric Equations
-  - [ ] Polar and Cylindrical Coordinates
+  - [ ] Polar Coordinates
 
 ### Part 2 - Differential Calculus
 - [ ] Chapter 4 - Limits and Continuity
@@ -91,7 +91,7 @@
   - [ ] Parametric Curves
   - [ ] Derivatives/Integrals of Vector Functions
   - [ ] Curvature
-- [ ] Chapter 14 Partial Derivatives
+- [ ] Chapter 14 - Partial Derivatives
   - [ ] Limits/Continuity in Higher Dimensions
   - [ ] Partial Derivatives
   - [ ] The Chain Rule
