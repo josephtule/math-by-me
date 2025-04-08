@@ -1,6 +1,6 @@
 # calkoolus
 
-### Part 1 - Preliminaries
+### Part 1 - Preliminaries (maybe move some of this to the appendix)
 - [ ] Chapter 1 - Functions
   - [ ] Sets
   - [ ] What is a function
@@ -116,3 +116,9 @@
   - [ ] Jacobian
   - [ ] Center of Mass
   - [ ] Fluid Flows
+
+### Appendix
+- [ ] The Real Numbers
+- [ ] Complex Numbers
+- [ ] Trigonometric Identities
+- [ ] Vector Identities
