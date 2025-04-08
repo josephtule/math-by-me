@@ -1,0 +1,60 @@
+\chapter{Functions}
+
+\section{Sets}
+Before defining what a function is or what it does, it is important to briefly discuss what goes into function and what comes out. Simply, \textit{sets}\index{set} are a collection of items and each one of those items are usually referred to as \textit{elements}\index{set!element}. Without getting into the weeds of set theory, sets can contain pretty much anything from numbers, functions, and other sets \cite{bookofproof}.
+
+Some common sets that you may be familiar with are the \textit{natural numbers} $\N = \{1,2,3,4,5,\dots\}$, the \textit{integers} $\Z = \{\dots,-2,-1,0,1,2,\dots\}$, and the \textit{real numbers} $\R$, which is usually represented via a number line. Sets can also be intervals on the real line (i.e. [a,b) is an interval on $\R$ containing $a$ but not $b$) or even the possible results of flipping a coin $C = \{H,T\}$.
+
+We will now define the basic notation when dealing with sets and the operations that can be performed on sets. We say that $x$ is an element of a set $A$ with the notation $x \in A$ and when $x$ is not in $A$, we say $x \not\in A$. For example, given the set $A = \{1,2,3,4\}$, we can say that $1 \in A$ is true as well as $5 \not\in A$.
+
+The notion of combining sets comes with \textit{unions}\index{set!union} and \textit{intersections}\index{set!intersection}. Given $A$ and $B$ are sets, the union of $A$ and $B$ is denoted as $A \cup B$ and is equal to the set the contains elements in either $A$ or $B$. Similarly, the intersection between $A$ and $B$ is denoted as $A \cap B$ and is the set that contains elements that are in both $A$ and $B$. For example, given the sets $A = \{1,2,3,4\}$ and $B = \{3,4,5,6\}$, the union and intersection between $A$ and $B$ is
+
+\begin{aequation}
+    A \cup B &= \{1,2,3,4,5,6\} \\
+    A \cap B &= \{3,4\}
+\end{aequation}
+
+Subsets are important to relate different sets. A set $A$ is said to be a subset of another set $B$ if all of the elements of $A$ are also within $B$ and is denoted as $A \subseteq B$ and a set $A$ is equal to a set $B$ if and only if $A \subseteq B$ and $B \subseteq A$. An important subset is the empty set represented by the symbols $\varnothing$, $\emptyset$, or simply $\{\}$. It is important to note that the empty set is also a subset of all sets.
+
+Using sets by listing them out can become cumbersome and sometimes confusing, instead set builder notation is used to build a set based on a rule. For example, the set of all positive even integers can be written as
+
+\begin{equation}
+    A = \{2,4,6,8,\dots\} = \{z : z \text{ is an positive even integer}\} = \{z : z = 2n, n\in\Z \text{ and } n > 0\}
+\end{equation}
+
+\noindent Here, the $:$ stands for "such that" which indicates the rule (the words "such that" or the symbol $|$ is also often used). The \textit{rational numbers} $\Q$ can also be constructed via the integers with
+
+\begin{equation}
+    \Q = \{\frac{p}{q} : p,q \in \Z \text{ and } q \neq 0\}
+\end{equation}
+
+As mentioned previously, intervals on the real number line can be represented as sets. Given two values $a$ and $b$ and assuming that $a \leq b$, intervals on the real line are represented as
+
+\begin{itemize}
+    \item Closed interval: $[a,b] = \{x \in \R : a \leq x \leq b\}$ \hfill \intervalinline{a}{b}{[}{]}
+    \item Open interval: $(a,b) = \{x \in \R : a < x < b\}$ \hfill \intervalinline{a}{b}{(}{)}
+    \item Half-open interval:
+        \begin{itemize}
+            \item $(a,b] = \{x \in \R : a < x \leq b\}$ \hfill \intervalinline{a}{b}{(}{]}
+            \item $[a,b) = \{x \in \R : a \leq x < b\}$ \hfill \intervalinline{a}{b}{[}{)}
+        \end{itemize}
+    \item Infinite interval:
+        \begin{itemize}
+            \item $(a,\infty) = \{x \in \R: a < x\}$ \hfill \intervalinline{a}{$\infty$}{(}{}
+                \item $[a,\infty) = \{x \in \R: a \leq x\}$ \hfill \intervalinline{a}{$\infty$}{[}{}
+                \item $(-\infty,b) = \{x \in \R: x < b\}$ \hfill \intervalinline{$-\infty$}{b}{}{)}
+            \item $(-\infty,b] = \{x \in \R: x \leq b\}$ \hfill \intervalinline{$-\infty$}{b}{}{]}
+            \item $(-\infty,\infty) = \R$ \hfill \intervalinline{$-\infty$}{$\infty$}{}{}
+        \end{itemize}
+\end{itemize}
+
+\noindent Here, the open brackets $($ and $)$ indicate that the respective endpoint is not included, while the closed brackets $[$ and $]$ indicate that the respective endpoint is included in the interval.
+
+\section{What is a function?}
+Functions are objects in math that describe a relationship.
+
+\section{The Graph of a Function}
+
+\section{Common Functions}
+
+\section{Inverse Function}

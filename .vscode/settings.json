@@ -1,0 +1,24 @@
+{
+    "cSpell.words": [
+        "basicstyle",
+        "breakatwhitespace",
+        "breaklines",
+        "captionpos",
+        "codegray",
+        "codegreen",
+        "codepurple",
+        "Hammack",
+        "keepspaces",
+        "keywordstyle",
+        "numbersep",
+        "numberstyle",
+        "showspaces",
+        "showstringspaces",
+        "showtabs",
+        "stringstyle",
+        "tabsize"
+    ],
+    "cSpell.ignoreWords": [
+        "examplenull"
+    ]
+}
