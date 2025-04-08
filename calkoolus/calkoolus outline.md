@@ -1,6 +1,5 @@
-# calculus-by-me
+# calkoolus
 
-## TODO
 ### Part 1 - Preliminaries
 - [ ] Chapter 1 - Functions
   - [ ] Sets
@@ -13,28 +12,28 @@
     - [ ] Inverse
     - [ ] Composition
   - [ ] Function classifications 
-- [ ] Chapter 2 - Equations and Inequalities (Review)
-  - [ ] Linear equations and inequalities
-  - [ ] Quadratic equations
-  - [ ] Polynomial and rational equations
-  - [ ] Exponential and logarithmic equations
-  - [ ] Absolute value and piecewise equations
-  - [ ] Systems of equations
-  - [ ] Inequalities
-- [ ] Chapter 3 - Exponential, Logarithmic, and Trigonometric Functions
-  - [ ] 
-- [ ] Chapter 4 - Analytic Geometry (Review)
+    - [ ] Even/Odd
+    - [ ] Increasing/Decreasing
+    - [ ] Periodic
+- [ ] Chapter 2 - Special Functions and Inequalities (Review)
+  - [ ] Linear Functions and inequalities
+  - [ ] Quadratic Functions
+  - [ ] Polynomial and Rational Functions
+  - [ ] Exponential and Logarithmic Functions
+  - [ ] Absolute Value and Piecewise Functions
+  - [ ] Systems of Equations
+- [ ] Chapter 3 - Analytic Geometry (Review)
   - [ ] Conic Sections
   - [ ] Parametric Equations
   - [ ] Polar and Cylindrical Coordinates
 
 ### Part 2 - Differential Calculus
-- [ ] Chapter 5 - Limits and Continuity
+- [ ] Chapter 4 - Limits and Continuity
   - [ ] Definition of a Limit
   - [ ] One-sided Limits, Limits to Infinity
   - [ ] Continuity and the Intermediate Value Theorem
   - [ ] The Squeeze Theorem
-- [ ] Chapter 6 - Differentiation and Derivatives
+- [ ] Chapter 5 - Differentiation and Derivatives
   - [ ] The Limit Definition of the Derivative
   - [ ] Differentiation Rules
     - [ ] Power Rule
@@ -46,34 +45,34 @@
     - [ ] Implicit Differentiation
     - [ ] Logarithmic Differentiation
     - [ ] Higher-order Derivatives
-- [ ] Chapter 7 - Application of Derivatives
+- [ ] Chapter 6 - Application of Derivatives
   - [ ] Related Rates
   - [ ] Optimization
   - [ ] L'Hopital's Rule
 
 ### Part 3 - Integral Calculus
-- [ ] Chapter 8 - Integration and Integrals
+- [ ] Chapter 7 - Integration and Integrals
   - [ ] Antiderivatives
   - [ ] Riemann Sums
   - [ ] Fundamental Theorem of Calculus
-- [ ] Chapter 9 - Integration Techniques
+- [ ] Chapter 8 - Integration Techniques
   - [ ] Substitution
   - [ ] Integration by parts/tabular integration
   - [ ] Partial fractions
   - [ ] Trigonometric substitutions
   - [ ] Hyperbolic substitutions
-- [ ] Chapter 10 - Application of Integrals
+- [ ] Chapter 9 - Application of Integrals
   - [ ] Areas between curves
   - [ ] Volumes of 3D shapes
     - [ ] Disk Method
     - [ ] Washer Method
     - [ ] Shell Method
   - [ ] Arc Length
-- [ ] Chapter 11 - Improper Integrals and Numerical Integration
+- [ ] Chapter 10 - Improper Integrals and Numerical Integration
   - [ ] Improper Integrals, Convergence
   - [ ] Trapezoidal Rule
   - [ ] Simpson's Rule
-- [ ] Chapter 12 - Sequences, Series, and Convergence
+- [ ] Chapter 11 - Sequences, Series, and Convergence
   - [ ] Infinite series
   - [ ] Convergence Tests
     - [ ] Comparison Test
@@ -84,34 +83,34 @@
 
 
 ### Part 4 - Multivariable Calculus
-- [ ] Chapter 13 - Vector and Vector Spaces
+- [ ] Chapter 12 - Vector and Vector Spaces
   - [ ] Vectors in 2D/3D
   - [ ] Dot/Cross Products
   - [ ] Lines/Planes in Space
-- [ ] Chapter 14 - Functions of Several Variables
+- [ ] Chapter 13 - Functions of Several Variables
   - [ ] Parametric Curves
   - [ ] Derivatives/Integrals of Vector Functions
   - [ ] Curvature
-- [ ] Chapter 15 Partial Derivatives
+- [ ] Chapter 14 Partial Derivatives
   - [ ] Limits/Continuity in Higher Dimensions
   - [ ] Partial Derivatives
   - [ ] The Chain Rule
   - [ ] The Gradient
   - [ ] Extremal Values
-- [ ] Chapter 16 - Multiple Integrals
+- [ ] Chapter 15 - Multiple Integrals
   - [ ] Double Integrals
   - [ ] Polar/Cylindrical/Spherical Coordinates (Part 2)
   - [ ] Surface Area and Volume
   - [ ] Triple Integrals
   - [ ] Change of Variables
-- [ ] Chapter 17 - Vector Calculus
+- [ ] Chapter 16 - Vector Calculus
   - [ ] Line Integrals
   - [ ] Green's Theorem
   - [ ] Divergence and Curl
   - [ ] Surface Integrals
   - [ ] Stokes' Theorem
   - [ ] Divergence Theorem
-- [ ] Chapter 18 - Applications of Multivariable Calculus
+- [ ] Chapter 17 - Applications of Multivariable Calculus
   - [ ] Lagrange Multipliers
   - [ ] Optimization
   - [ ] Jacobian
