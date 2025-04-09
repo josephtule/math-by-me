@@ -50,13 +50,13 @@ As mentioned previously, intervals on the real number line can be represented as
 
 \noindent Here, the open brackets $($ and $)$ indicate that the respective endpoint is not included, while the closed brackets $[$ and $]$ indicate that the respective endpoint is included in the interval.
 
-The \textit{Cartesian product}\index{set!Cartesian product} is used often to describe ordered pairs or even higher-dimension coordinates. Some examples include the $xy$-plane also known as $\R^2$, 3D space with $\R^3$. The Cartesian product for two sets $A$ and $B$ is defined as 
+The \textit{Cartesian product}\index{set!Cartesian product} (also known as the \textit{direct product}\index{set!direct product}) is used often to describe ordered pairs or even higher-dimension coordinates. Some examples include the $xy$-plane also known as $\R^2$, 3D space with $\R^3$. The Cartesian product for two sets $A$ and $B$ is defined as
 
 \begin{equation}
     A \times B = \{(a,b) : a \in A, b \in B\}
 \end{equation}
 
-\noindent Note that $A \times B \neq B \times A$ as the operation is order dependent. Higher-order products are defined with sets $A_1, A_2, \dots, A_n$ as 
+\noindent Note that, in general, $A \times B \neq B \times A$ as the operation is order dependent. Higher-order products are defined with sets $A_1, A_2, \dots, A_n$ as
 
 \begin{equation}
     A_1 \times A_2 \times \cdots \times A_n = \{(a_1,a_2,\dots,a_n): a_i \in A_i, i \in \{1,2,\dots,n\}\}
@@ -74,7 +74,51 @@ The \textit{Cartesian product}\index{set!Cartesian product} is used often to des
 For more discussion on sets and set theory, refer to \cite{naivesettheory} or \cite{bookofproof}.
 
 \section{What is a function?}
-\textit{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the elements of $X$, called the \textit{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textit{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$" \cite{understandinganalysis}), where $y \in Y$ is known as the \textit{dependent variable}\index{function!dependent variable} and $x \in X$ is known as the \textit{independent variable}\index{function!independent variable} or the \textit{argument}\index{function!argument} of the function. The \textit{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of $Y$ but is not always equal.
+\textit{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the unique elements of $X$, called the \textit{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textit{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$" \cite{understandinganalysis}), where $y \in R \subseteq Y$ is known as the \textit{dependent variable}\index{function!dependent variable} with $R$ as the range of the function and $x \in X$ is known as the \textit{independent variable}\index{function!independent variable} or the \textit{argument}\index{function!argument} of the function. The \textit{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of the codomain $Y$ but is not always equal. Formally, the definition is as follows
+
+\begin{definition}
+    A \textit{function} is a mapping or rule that assigns each element from a set called the domain $X$ of the function to a unique element in the range $R = f(X)$ of the function which is a subset of the codomain $R \subseteq Y$ and the element $x \in X$ is mapped to an element in $y \in R \subseteq Y$ with $x \mapsto y$.
+\end{definition}
+
+Further emphasis must be made on the elements $y = f(x)$. The function $f(x)$ maps the element $x \in X$ to exactly one element $y \in Y$ \cite{elemrealandcomplex}. For single variable functions, this can be tested using the vertical line test on a function's graph (covered shortly). If a formula results in two answers with one input (i.e. the equation for a circle: $x^2 + y^2 = r$ gives two points of $y$ for each $x$) it is no longer considered a function. Figure \ref{functionmapping} shows how a function maps elements of the domain to the range.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}[font=\small]
+        % % Origin (for reference)
+        % \node (origin) at (0,0) {$\bullet$};
+
+        % Domain (X) - Blue circle
+        \filldraw[fill=blue!20, draw=blue!60] (-1.5,0) circle (1cm);
+        \node at (-1.5,1.2) {$X$};  % Domain label above circle
+
+        % Codomain (Y) - Red circle with Range (R) - Green circle
+        \filldraw[fill=red!20, draw=red!60] (1.5,0) circle (1cm);
+        \node at (1.5,1.2) {$Y$};  % Codomain label above circle
+        \filldraw[fill=green!20, draw=green!60] (1.2,0) circle (0.6cm);
+        \node at (1.2,0) {$R$};  % Range label centered in green circle
+
+        % Domain points with tight labels
+        \node[circle,fill=blue,inner sep=1.5pt] (x) at (-1.2,0.5) {};
+        \node[left=0.1cm] at (x) {$x$};
+
+        \node[circle,fill=blue,inner sep=1.5pt] (a) at (-1.75,-0.5) {};
+        \node[left=0.1cm] at (a) {$a$};
+
+        % Codomain points
+        \node[circle,fill=red,inner sep=1.5pt] (fx) at (1.3,0.3) {};
+        \node[circle,fill=red,inner sep=1.5pt] (fa) at (1.1,-0.3) {};
+
+        % Arrows with labels attached
+        \draw[->] (x) -- node[midway,above,sloped] {\scriptsize$f(x)$} (fx);
+        \draw[->] (a) -- node[midway,below,sloped] {\scriptsize$f(a)$} (fa);
+
+        % Function label below
+        \node at (0,-1.5) {$f: X \to Y$};
+    \end{tikzpicture}
+    \caption{Function mapping diagram showing the domain $X$, codomain $Y$, and range $f(X)$}
+    \label{functionmapping}
+\end{figure}
 
 \begin{example}
     Some real-world examples of functions are
@@ -85,11 +129,46 @@ For more discussion on sets and set theory, refer to \cite{naivesettheory} or \c
         \item Temperature conversion: \dotfill $C(F) = \frac{5}{9}(F - 32)$
         \item %TODO: add more examples here
     \end{itemize}
-    \noindent These examples help model and compute 
+    It can be useful to think of functions as machines that take in an input and produces an output. The examples above show such cases using mathematical formulas that give a set of instructions on how the input is transformed from the element in the domain to the element in the range.
 \end{example}
 
+Another way to represent functions is with its \textit{graph}\index{function!graph} which is a set of points consisting of the input and its corresponding output and is represented with the set of ordered pairs $\{(x,y) : y = f(x), x\in\R\}$ for functions that accept real numbers.
 
-\section{The Graph of a Function}
+\begin{example}
+    A familiar example is the linear function $f(x) = mx + b$ where $m$ is the slope of the line and $b$ is the vertical offset. Suppose $m = 1$ and $b = 0$, we get the following graph for the function $f(x) = x$ in figure \ref{f(x)=x graph}
+    \begin{figure}[!ht]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[xmin=-2, xmax=2, ymin=-2, ymax=2,
+                axis lines=middle, xlabel=$x$, ylabel=$y$]
+                \addplot[color=black,grid,]{x};
+            \end{axis}
+        \end{tikzpicture}
+        \label{f(x)=x graph}
+        \caption{Graph of the function $f(x) = x$}
+    \end{figure}
+\end{example}
+
+\begin{example}
+    Another example is the quadratic function of the form $f(x) = ax^2 + bx + c$, where $a,b,c \in \R$ are the coefficients of the function and determine its shape. Suppose that $a = 1, b = 0, c = -1$ resulting in the function $f(x) = x^2 - 1$. Using knowledge of the roots a quadratic function, it can be deduced that this will result in a parabola with $x$-intersections at $x = -1$ and $x = 1$ which can be confirmed in the graph in figure \ref{f(x)=x^2-1graph}
+
+    \begin{figure}[!ht]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                    xmin=-2, xmax=2,
+                    ymin=-2, ymax=2,
+                    xlabel=$x$, ylabel=$y$,
+                    axis lines=middle,
+                    % grid=both
+                ]
+                \addplot[color=black, domain=-2:2, samples=50]{x^2 - 1};
+            \end{axis}
+        \end{tikzpicture}
+        \label{f(x)=x^2-1graph}
+        \caption{Graph of the function $f(x) = x^2-1$}
+    \end{figure}
+\end{example}
 
 \section{Common Functions}
 
@@ -103,6 +182,3 @@ For more discussion on sets and set theory, refer to \cite{naivesettheory} or \c
 \section{Function Compositions}
 
 \section{Function Transformations and Operations}
-
-
-
