@@ -14,7 +14,7 @@ The notion of combining sets comes with \textit{unions}\index{set!union} and \te
     A \cap B &= \{3,4\}
 \end{aequation}
 
-Subsets are important to relate different sets. A set $A$ is said to be a subset of another set $B$ if all of the elements of $A$ are also within $B$ and is denoted as $A \subseteq B$ and a set $A$ is equal to a set $B$ if and only if $A \subseteq B$ and $B \subseteq A$. An important subset is the empty set represented by the symbols $\varnothing$, $\emptyset$, or simply $\{\}$. It is important to note that the empty set is also a subset of all sets.
+Subsets are often used to relate different sets and their elements. A set $A$ is said to be a subset of another set $B$ if all of the elements of $A$ are also within $B$ and is denoted as $A \subseteq B$ and a set $A$ is equal to a set $B$ if and only if $A \subseteq B$ and $B \subseteq A$. An important subset is the empty set represented by the symbols $\varnothing$, $\emptyset$, or simply $\{\}$. It is important to note that the empty set is also a subset of all sets.
 
 Using sets by listing them out can become cumbersome and sometimes confusing, instead set builder notation is used to build a set based on a rule. For example, the set of all positive even integers can be written as
 
@@ -50,24 +50,53 @@ As mentioned previously, intervals on the real number line can be represented as
 
 \noindent Here, the open brackets $($ and $)$ indicate that the respective endpoint is not included, while the closed brackets $[$ and $]$ indicate that the respective endpoint is included in the interval.
 
+The \textit{Cartesian product}\index{set!Cartesian product} is used often to describe ordered pairs or even higher-dimension coordinates. Some examples include the $xy$-plane also known as $\R^2$, 3D space with $\R^3$. The Cartesian product for two sets $A$ and $B$ is defined as 
+
+\begin{equation}
+    A \times B = \{(a,b) : a \in A, b \in B\}
+\end{equation}
+
+\noindent Note that $A \times B \neq B \times A$ as the operation is order dependent. Higher-order products are defined with sets $A_1, A_2, \dots, A_n$ as 
+
+\begin{equation}
+    A_1 \times A_2 \times \cdots \times A_n = \{(a_1,a_2,\dots,a_n): a_i \in A_i, i \in \{1,2,\dots,n\}\}
+\end{equation}
+
+\noindent As previously mentioned, the 2D plane as well as the 3D plane can be constructed using Cartesian products as well and is done as such with the set of real numbers $\R$
+
+\begin{aequation}
+    \R^2 &= \R \times \R = \{(x,y): x,y \in \R\}\\
+    \R^3 &= \R \times \R \times \R = \{(x,y,z): x,y,z \in \R\}\\
+    & \vdots \\
+    \R^n &= \R \times \R \times \dots \times \R = \{(x_1, x_2, \dots, x_n) : x_i \in \R, i \in \{1,2,\dots, n\} \}
+\end{aequation}
+
+For more discussion on sets and set theory, refer to \cite{naivesettheory} or \cite{bookofproof}.
+
 \section{What is a function?}
-\textit{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the elements of $X$, called the \textit{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textit{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$"), where $y \in Y$ is known as the \textit{dependent variable}\index{function!dependent variable} and $x \in X$ is known as the \textit{independent variable}\index{function!independent variable} or the \textit{argument}\index{function!argument} of the function. The \textit{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of $Y$ but is not always equal.
+\textit{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the elements of $X$, called the \textit{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textit{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$" \cite{understandinganalysis}), where $y \in Y$ is known as the \textit{dependent variable}\index{function!dependent variable} and $x \in X$ is known as the \textit{independent variable}\index{function!independent variable} or the \textit{argument}\index{function!argument} of the function. The \textit{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of $Y$ but is not always equal.
 
-Some real-world examples of functions are
+\begin{example}
+    Some real-world examples of functions are
+    \begin{itemize}
+        \item The area of a circle: \dotfill $A(r) = \pi r^2$
+        \item The height of a falling ball: \dotfill $h(t) = h_0 + v_0 t - (1/2)gt^2$
+        \item Compound interest: \dotfill $A(t) = P(1+\frac{r}{n})^{nt}$
+        \item Temperature conversion: \dotfill $C(F) = \frac{5}{9}(F - 32)$
+        \item %TODO: add more examples here
+    \end{itemize}
+    \noindent These examples help model and compute 
+\end{example}
 
-\begin{itemize}
-    \item The area of a circle: \dotfill $A(r) = \pi r^2$
-    \item The height of a falling ball: \dotfill $h(t) = h_0 + v_0 t - (1/2)gt^2$
-    \item Compound interest: \dotfill $A(t) = P(1+\frac{r}{n})^{nt}$
-    \item Temperature conversion: \dotfill $C(F) = \frac{5}{9}(F - 32)$
-    \item %TODO: add more examples here
-\end{itemize}
 
 \section{The Graph of a Function}
 
-\section{Types of Functions}
-
 \section{Common Functions}
+
+\section{Types of Functions}
+\subsection{Even and Odd Functions}
+\subsection{Increasing and Decreasing Functions}
+\subsection{Periodic Functions}
 
 \section{Inverse Function}
 
@@ -75,6 +104,5 @@ Some real-world examples of functions are
 
 \section{Function Transformations and Operations}
 
-\section{Even, Odd, Increasing, Decreasing, and Periodic Functions}
 
 

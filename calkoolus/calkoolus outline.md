@@ -1,6 +1,7 @@
 # calkoolus
 
 ### Part 1 - Preliminaries (maybe move some of this to the appendix)
+
 - [ ] Chapter 1 - Functions
   - [ ] Sets
   - [ ] What is a function
@@ -11,12 +12,12 @@
     - [ ] Transformations
     - [ ] Inverse
     - [ ] Composition
-  - [ ] Function classifications 
+  - [ ] Function classifications
     - [ ] Even/Odd
     - [ ] Increasing/Decreasing
     - [ ] Periodic
 - [ ] Chapter 2 - Special Functions (Review)
-  - [ ] Linear Functions 
+  - [ ] Linear Functions
   - [ ] Quadratic Functions
   - [ ] Polynomial and Rational Functions
   - [ ] Exponential and Logarithmic Functions
@@ -28,6 +29,7 @@
   - [ ] Polar Coordinates
 
 ### Part 2 - Differential Calculus
+
 - [ ] Chapter 4 - Limits and Continuity
   - [ ] Definition of a Limit
   - [ ] One-sided Limits, Limits to Infinity
@@ -51,6 +53,7 @@
   - [ ] L'Hopital's Rule
 
 ### Part 3 - Integral Calculus
+
 - [ ] Chapter 7 - Integration and Integrals
   - [ ] Antiderivatives
   - [ ] Riemann Sums
@@ -81,8 +84,8 @@
   - [ ] Power Series
   - [ ] Taylor Series
 
-
 ### Part 4 - Multivariable Calculus
+
 - [ ] Chapter 12 - Vector and Vector Spaces
   - [ ] Vectors in 2D/3D
   - [ ] Dot/Cross Products
@@ -118,6 +121,7 @@
   - [ ] Fluid Flows
 
 ### Appendix
+
 - [ ] The Real Numbers
 - [ ] Complex Numbers
 - [ ] Trigonometric Identities
