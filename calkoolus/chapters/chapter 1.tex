@@ -279,14 +279,29 @@ The graphs of linear functions are straight lines, if the domain of the function
 
 \subsection{Increasing and Decreasing Functions}
 \begin{definition}
-    A function defined on an interval $I$ is said to be \textit{increasing}\index{function!increasing} between two increasing points $x_1, x_2 \in I$ if and only if
+    A function $f$ is \textit{increasing}\index{function!increasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
     $$
-    f(x_2) > f(x_1)
+    f(x_1) \leq f(x_2).
     $$
-    where $x_1 < x_2$.
+    If the inequality is strict ($f(x_1) < f(x_2)$), we say $f$ is \textit{strictly increasing}\index{function!strictly increasing}.
+\end{definition}
+
+\begin{definition}
+    A function $f$ is \textit{decreasing}\index{function!decreasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
+    $$
+    f(x_1) \geq f(x_2).
+    $$
+    If the inequality is strict ($f(x_1) > f(x_2)$), we say $f$ is \textit{strictly decreasing}\index{function!strictly decreasing}.
 \end{definition}
 
 \subsection{Periodic Functions}
+\begin{definition}
+    A function is said to be a \textit{period function}\index{function!periodic} if and only if for some value $a$,
+    $$
+    f(x) = f(x+a)
+    $$
+    where $a$ is the period of the function. The period defines the magnitude of the independent variable required for the function to repeat.
+\end{definition}
 
 \section{Function Transformations and Operations}
 \subsection{Function Arithmetic}
