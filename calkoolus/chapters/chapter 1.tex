@@ -25,7 +25,7 @@ Using sets by listing them out can become cumbersome and sometimes confusing, in
 \noindent Here, the $:$ stands for "such that" which indicates the rule (the words "such that" or the symbol $|$ is also often used). The \textit{rational numbers} $\Q$ can also be constructed via the integers with
 
 \begin{equation}
-    \Q = \{\frac{p}{q} : p,q \in \Z \text{ and } q \neq 0\}
+    \Q = \left\{\frac{p}{q} : p,q \in \Z \text{ and } q \neq 0\right\}
 \end{equation}
 
 As mentioned previously, intervals on the real number line can be represented as sets. Given two values $a$ and $b$ and assuming that $a \leq b$, intervals on the real line are represented as
@@ -72,6 +72,8 @@ The \textit{Cartesian product}\index{set!Cartesian product} (also known as the \
 \end{aequation}
 
 For further and more formal discussion on sets and naive set theory as well as formal logic and proof writing, refer to \cite{naivesettheory} or \cite{bookofproof}.
+
+\subsection{Exercises}
 
 \section{What is a function?}
 \textit{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the unique elements of $X$, called the \textit{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textit{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$" \cite{understandinganalysis}), where $y \in R \subseteq Y$ is known as the \textit{dependent variable}\index{function!dependent variable} with $R$ as the range of the function and $x \in X$ is known as the \textit{independent variable}\index{function!independent variable} or the \textit{argument}\index{function!argument} of the function. The \textit{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of the codomain $Y$ but is not always equal. Formally, the definition is as follows
@@ -132,10 +134,12 @@ Further emphasis must be made on the elements $y = f(x)$. The function $f(x)$ ma
     It can be useful to think of functions as machines that take in an input and produces an output. The examples above show such cases using mathematical formulas that give a set of instructions on how the input is transformed from the element in the domain to the element in the range.
 \end{example}
 
+\subsection{Graphs of Functions}
+
 Another way to represent functions is with its \textit{graph}\index{function!graph} which is a set of points consisting of the input and its corresponding output and is represented with the set of ordered pairs $\{(x,y) : y = f(x), x\in\R\}$ for functions that accept real numbers.
 
 \begin{example}
-    A familiar example is the linear function $f(x) = mx + b$ where $m$ is the slope of the line and $b$ is the vertical offset. Suppose $m = 1$ and $b = 0$, we get the following graph for the function $f(x) = x$ in figure \ref{f(x)=x graph}
+    A familiar example is the linear function $f(x) = mx + b$ where $m$ is the slope of the line and $b$ is the vertical offset. Suppose $m = 1$ and $b = 0$, we get the following graph for the function $f(x) = x$ in Figure \ref{f(x)=x graph}
     \begin{figure}[!ht]
         \centering
         \begin{tikzpicture}
@@ -150,7 +154,7 @@ Another way to represent functions is with its \textit{graph}\index{function!gra
 \end{example}
 
 \begin{example}
-    Another example is the quadratic function of the form $f(x) = ax^2 + bx + c$, where $a,b,c \in \R$ are the coefficients of the function and determine its shape. Suppose that $a = 1, b = 0, c = -1$ resulting in the function $f(x) = x^2 - 1$. Using knowledge of the roots a quadratic function, it can be deduced that this will result in a parabola with $x$-intersections at $x = -1$ and $x = 1$ which can be confirmed in the graph in figure \ref{f(x)=x^2-1graph}
+    Another example is the quadratic function of the form $f(x) = ax^2 + bx + c$, where $a,b,c \in \R$ are the coefficients of the function and determine its shape. Suppose that $a = 1, b = 0, c = -1$ resulting in the function $f(x) = x^2 - 1$. Using knowledge of the roots a quadratic function, it can be deduced that this will result in a parabola with $x$-intersections at $x = -1$ and $x = 1$ which can be confirmed in the graph in Figure \ref{f(x)=x^2-1graph}
 
     \begin{figure}[!ht]
         \centering
@@ -170,15 +174,122 @@ Another way to represent functions is with its \textit{graph}\index{function!gra
     \end{figure}
 \end{example}
 
+\subsection{Table Functions}
+
+The last representation of a function that will be discussed are functions that are in the form of tables. Consider two finite sets $X = \{1,2,3,4,5\}$ and $Y = \{2,4,6,8,10\}$ and a function that maps the elements of $X$ to the elements of $Y$. A table can be created that shows the assignment of the elements (Table \ref{tab:tablefunctionex}) via the function $f(x)$.
+
+\begin{table}[!ht]
+    \centering
+    \[
+        \begin{array}{|*{6}{c|}}
+            \hline
+            x \in X & 1 & 2 & 3 & 4 & 5 \\
+            \hline
+            y \in Y & 2 & 4 & 6 & 8 & 10 \\
+            \hline
+        \end{array}
+    \]
+    \caption{Function Mapping from \( X \) to \( Y \)}
+    \label{tab:tablefunctionex}
+\end{table}
+
+The function shown in Table \ref{tab:tablefunctionex} is constructed from a mathematical formula ($y = 2x$), this is not necessary, as long as there is only one output for any given input, then, the table is considered a function.
+
+\begin{example} For example, consider the following table that shows the function that maps $X = \{1,3,5,8,4\}$ to $Y = \{3,5,2,1,1\}$ in Table \ref{tab:tablefunctionex2}.
+    \begin{table}[!ht]
+        \centering
+        \[
+            \begin{array}{|*{6}{c|}}
+                \hline
+                x \in X & 1 & 3 & 5 & 8 & 4 \\
+                \hline
+                y \in Y & 3 & 5 & 2 & 1 & 1 \\
+                \hline
+            \end{array}
+        \]
+        \caption{Function Mapping from \( X \) to \( Y \)}
+        \label{tab:tablefunctionex2}
+    \end{table}
+    Though a value in $Y$ repeats once, it still passes the vertical line test as the function maps only one output $y$ from any input $x$.
+\end{example}
+
+This conceptual foundation of what a  function is prepares us for the introduction and review of commonly used functions and function families (functions with similar forms and properties).
+
+\subsection{Exercises}
+
 \section{Common Functions}
+Functions, namely those defined via mathematical formulas, can be classified into function families whose members share common features, forms, and properties. Some such families often differ only in coefficients and others may change the base in which they operate.
+
+\subsection{Linear Functions}
+Beginning with the most elementary form of functions created using mathematical formulas is the \textit{linear function}\index{function!linear} or the equation for a line.
+
+\begin{definition}
+    Functions of the form $f(x) = mx + b$, where $m$ is the slope and $b$ is the $y$-intercept, are considered \textit{linear functions}.
+\end{definition}
+
+The graphs of linear functions are straight lines, if the domain of the function is $\R$, then the graph of $f$ extends from $-\infty$ to $+\infty$. It's slope determines the angle of the line and can be reconstructed with any two points on the line with the following formula
+
+\begin{equation}
+    m = \frac{y_2-y_1}{x_2-x_1}
+    \label{slopeofaline}
+\end{equation}
+
+\noindent where $y_i$ corresponds to $x_i$ and $x_2 > x_1$. The $y$-intercept the value of the $y$-coordinate of the function when $x=0$ and denotes where the line crosses the $y$-axis on the graph. An example for the graph of a linear function is shown in Figure \ref{f(x)=x graph} where $f(x) = x$.
+
+\begin{example}
+    Linear functions can model the conversion between temperatures in degrees Celsius and Fahrenheit with the function $C(F) = \frac{5}{9}(F - 32) = \frac{5}{9}F - \frac{160}{9}$. Here the independent variable is F, the slope is $\frac{5}{9}$, and the $y$-intercept is $\frac{160}{9}$ and the graph is shown in Figure \ref{FtoCgraph}.
+
+    \begin{figure}[!ht]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[xmin=-10, xmax=40, ymin=-20, ymax=10,
+                axis lines=middle, xlabel=$F$, ylabel=$C(F)$]
+                \addplot[color=black,grid,domain=-10:40]{5/9*(x-32)};
+            \end{axis}
+        \end{tikzpicture}
+        \label{FtoCgraph}
+        \caption{Graph of the function $f(x) = x$}
+    \end{figure}
+\end{example}
+
+\subsection{Quadratic Functions}
+\subsection{Polynomial and Rational Functions}
+\subsection{Trigonometric Functions}
+\subsection{Power, Exponential, and Logarithmic Functions}
+\subsection{Systems of Equations}
 
 \section{Types of Functions}
+\subsection{Piecewise Functions and Absolute Values}
 \subsection{Even and Odd Functions}
+\begin{definition}
+    A function $f(x)$ is said to be an \textit{even function}\index{function!even} of the independent variable $x$ if and only if
+    $$
+    f(-x) = f(x)
+    $$
+    for all $x$ in the function's domain.
+\end{definition}
+
+\begin{definition}
+    A function $f(x)$ is said to be an \textit{odd function}\index{function!odd} of the independent variable $x$ if and only if
+    $$
+    f(-x) = -f(x)
+    $$
+    for all $x$ in the function's domain.
+\end{definition}
+
 \subsection{Increasing and Decreasing Functions}
+\begin{definition}
+    A function defined on an interval $I$ is said to be \textit{increasing}\index{function!increasing} between two increasing points $x_1, x_2 \in I$ if and only if
+    $$
+    f(x_2) > f(x_1)
+    $$
+    where $x_1 < x_2$.
+\end{definition}
+
 \subsection{Periodic Functions}
 
-\section{Inverse Function}
-
-\section{Function Compositions}
-
 \section{Function Transformations and Operations}
+\subsection{Function Arithmetic}
+\subsection{Function Translation}
+\subsection{Fuction Composition}
+\subsection{Function Inverses}
