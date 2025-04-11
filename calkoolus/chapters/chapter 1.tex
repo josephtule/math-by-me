@@ -403,7 +403,9 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         \end{example}
 
         \subsection{Trigonometric Functions}
-        While the progression from linear to polynomial functions follows an algebraic development, trigonometric functions like $f(x) = \sin(x)$ and $f(x) = \cos(x)$ come from the fundamental geometric concepts of triangles and \textit{angle}\index{angle}. Angles, measured in \textit{radians}\index{angle!radian} or \textit{degrees}\index{angle!degree} where a full circle is measured have an angle of $2\pi$ radians or $360^circ$ ($360$ degrees). The measure of angles and inputs/outputs for trigonometric functions will always be assumed to be in radians unless specified. One radian is equal to the radius of the unit circle and wraps around the circumference of that circle $2\pi$ times and is defined using $\theta$ as the angle measure $\theta = \frac{s}{r}$ where $s$ is the arclength (see Figure \ref{anglemeasure}).
+        While the progression from linear to polynomial functions follows an algebraic development (any functions formed using algebraic operations: $\{+,-,\times,\div,x^a,\sqrt[a]{(\cdot)},\dots\}$), trigonometric functions like $f(x) = \sin(x)$ and $f(x) = \cos(x)$ come from the fundamental geometric concepts of triangles and \textit{angle}\index{angle} and are considered \textit{transcendental}\index{function!transcendental}. Transcendental functions are any functions not that are not algebraic, including trigonometric, exponential, and logarithmic functions (discussed in Section \ref{sect:explog}).
+
+        Angles, measured in \textit{radians}\index{angle!radian} or \textit{degrees}\index{angle!degree} where a full circle is measured have an angle of $2\pi$ radians or $360^circ$ ($360$ degrees). The measure of angles and inputs/outputs for trigonometric functions will always be assumed to be in radians unless specified. One radian is equal to the radius of the unit circle and wraps around the circumference of that circle $2\pi$ times and is defined using $\theta$ as the angle measure $\theta = \frac{s}{r}$ where $s$ is the arclength (see Figure \ref{anglemeasure}).
 
         The definition of the \textit{sine}\index{function!trigonometric!sine} and \textit{cosine}\index{function!trigonometric!cosine} functions come from right triangle trigonometry, where $\theta$ is an acute angle (not the right angle). In the context of the unit circle, draw a radius from the origin forming an angle $\theta$ with the positive $x$-axis. From the point where the radius intersects the circle, drop a perpendicular to the $x$-axis to form a right triangle. The horizontal leg, labeled $x$, is the adjacent side to $\theta$, and the vertical leg, labeled $y$, is the opposite side. The hypotenuse is the radius $r$ of the circle. By definition, $\sin(\theta) = \frac{y}{r}$ and $\cos(\theta) = \frac{x}{r}$. On the unit circle, where $r = 1$, this simplifies to $\sin(\theta) = y$ and $\cos(\theta) = x$. Figure~\ref{anglemeasure} shows this triangle embedded in the circle.
 
@@ -520,6 +522,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         As noted with the sine, cosine, and tangent functions, these are periodic, meaning they identically repeat after a set period, this is further discussed in Section \ref{sect:periodicfunctions}.
 
         \subsection{Exponential and Logarithmic Functions}
+        \label{sect:explog}
         The last family of functions we are going to present in this section are the \textit{exponential} and \textit{logarithmic}functions.
 
         \begin{definition}
@@ -634,10 +637,50 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         % \subsection{Systems of Equations}
 
         \section{Types of Functions}
-        It is important to be able to distinguish functions and classify their behaviors into distinct characteristics in order to properly analyze them. Characteristics such as symmetry (evenness and oddness of a function) and periodicity (repeating functions) are defined in such ways that may give insight into solving certain problems or giving us the opportunity to exploit their definitions.
+        It is important to be able to further distinguish functions and classify their behaviors into distinct characteristics in order to properly analyze them. Characteristics such as symmetry (evenness and oddness of a function) and periodicity (repeating functions) are defined in such ways that may give insight into solving certain problems or giving us the opportunity to exploit their definitions.
 
         \subsection{Piecewise Functions and Absolute Values}
+        \textit{Piecewise functions}\index{function!piecewise} are formed with multiple functions on separate intervals for the domain. For example, in a rational function with holes, $g(x) = \frac{(x+1)(x-1)}{(x+1)}$ the hole at $x = -1$ can be "plugged" with a piecewise function
+
+        $$
+        f(x) =
+        \begin{cases}
+            g(x) = \frac{(x+1)(x-1)}{(x+1)} & \text{if } x \neq -1 \\
+            -2 & \text{if } x = -1
+        \end{cases}
+        $$
+
+        An important type of piecewise function is the \textit{absolute value}\index{function!piecewise!absolute value} defined as
+
+        \begin{equation}
+            |x| =
+            \begin{cases}
+                x & \text{if } x >= 0 \\
+                -x & \text{if } x < 0
+            \end{cases}
+        \end{equation}
+
+        \noindent This returns a positive value for all inputs so the range is $[0,\infty)$. The absolute value is important as it allows us to define a notion of \textit{distance}\index{distance} between numbers. For example take $a = 10$ and $b = 3$, the distance between $a$ and $b$ is
+
+        \begin{equation}
+            d = |b - a| = |3 - 10| = |-7| = 7
+        \end{equation}
+
+        \noindent so $a$ is $7$ units away from $b$. The absolute value has the property $|ab| = |a||b|$ and the \textit{triangle inequality}\index{triangle inequality} with the following definition
+
+        \begin{definition}
+            The \textit{Triangle Inequality}
+
+            \begin{aequation}
+                |a+b| &\leq |a| + |b| \\
+                |(a-c)+(c-b)| = |a-b| &\leq |a-c| + |c-b|
+            \end{aequation}
+        \end{definition}
+
+        \noindent This states that the distance from point $a$ to point $b$ is less or equal to that of the distance from $a$ to a point $c$ and then from the point $c$ to the point $b$ (this may make more sense in higher dimensions discussed later).
+
         \subsection{Even and Odd Functions}
+        Function symmetry
         \begin{definition}
             A function $f(x)$ is said to be an \textit{even function}\index{function!even} of the independent variable $x$ if and only if
             $$
