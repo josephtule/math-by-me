@@ -230,7 +230,7 @@ Beginning with the most elementary form of functions created using mathematical 
         f(x) = mx + b
     \end{equation}
 
-    \noindent where $m$ is the slope and $b$ is the $y$-intercept, are \textit{linear functions}.
+    \noindent where $m$ is the slope and $b$ is the $y$-intercept, are \textit{linear functions}. The domain and range of linear functions is all the real numbers, $(-\infty,\infty)$.
 \end{definition}
 
 The graphs of linear functions are straight lines, if the domain of the function is $\R$, then the graph of $f$ extends from $-\infty$ to $+\infty$. It's slope determines the angle of the line and can be reconstructed with any two points on the line with the following formula
@@ -270,7 +270,7 @@ Quadratic functions are the next natural progression after linear functions. The
         f(x) = ax^2 + bx + c
     \end{equation}
 
-    \noindent are \textit{quadratic functions}\index{function!quadratic}, this is the standard form for a quadratic function. Alternative forms to the standard quadratic function are the root form $f(x) = (x-a)(x-b)$ where $a$ and $b$ are the $x$-intercepts of the function and the vertex form $f(x) = a(x-h)^2+k$ where the point $h,k$ is the vertex of the parabola.
+    \noindent are \textit{quadratic functions}\index{function!quadratic}, this is the standard form for a quadratic function. Alternative forms to the standard quadratic function are the root form $f(x) = (x-a)(x-b)$ where $a$ and $b$ are the $x$-intercepts of the function and the vertex form $f(x) = a(x-h)^2+k$ where the point $h,k$ is the vertex of the parabola. The domain and range of quadratic functions span the entirety of the real numbers.
 \end{definition}
 
 Quadratic functions have some useful properties such as the root(s) of the parabola (the $x$-intercept(s)) as well as having an explicit formula for computing the root(s) of the function known as the \textit{quadratic formula}\index{function!quadratic!formula}. The quadratic formula solves for the $x$-coordinate(s) of the roots for a given quadratic function (where $y=0$)
@@ -314,7 +314,7 @@ Generalizing upon the linear and quadratic functions further, polynomial functio
         f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0
     \end{equation}
 
-    \noindent are \textit{polynomial functions}\index{function!polynomial}. Where $n$ is the \textit{degree}\index{function!polynomial!degree} of the polynomial (whne $a_n \neq 0$) and $a_i$ for $i \in {0,1,\dots,n-1,n}$ are the coefficients.
+    \noindent are \textit{polynomial functions}\index{function!polynomial}. Where $n$ is the \textit{degree}\index{function!polynomial!degree} of the polynomial (when $a_n \neq 0$) and $a_i$ for $i \in \{0,1,\dots,n-1,n\}$ are the coefficients. The domain and range of polynomials, like linear and quadratic functions, span the entirety of the real numbers.
 \end{definition}
 
 Similar to quadratic functions, polynomials have up to $n$ roots but do not have an explicit formula to compute those roots for polynomials with degree $n > 3$. Linear functions and quadratic functions can be considered special cases of polynomial functions with degree $n=1$ and $n=2$ respectively. Common higher-order polynomials are \textit{cubic functions}\index{function!polynomial!cubic} $n=3$, \textit{quartic functions}\index{function!polynomial!quartic} $n=4$, and \textit{quintic functions}\index{function!polynomial!quintic} $n=5$. A useful property of polynomials is that there are at most $n$ roots for a polynomial of degree $n$, note that when a polynomial has less (real and complex) roots than its degree, one of its roots may have a multiplicity greater than one meaning that it is repeated. For example, the polynomial (in root form) $f(x) = (x+1)(x+1)(x+1) = (x+1)^3 = x^3 + 3x^2 + 3x + 1$ has all three roots at $x=-1$ which means that the root $(x=-1,y=0)$ has multiplicity of 3.
@@ -351,13 +351,13 @@ Similar to quadratic functions, polynomials have up to $n$ roots but do not have
 Rational functions branch from polynomials in a similar way to how rational numbers branch from the integers as they are constructed by dividing one polynomial by another.
 
 \begin{definition}
-    The function of the form
+    Functions of the form
 
     \begin{equation}
         f(x) = \frac{p(x)}{q(x)}
     \end{equation}
 
-    \noindent where $p(x)$ and $q(x) \neq 0$ are polynomial functions are known as \textit{rational functions}\index{function!rational}.
+    \noindent where $p(x)$ and $q(x) \neq 0$ are polynomial functions are known as \textit{rational functions}\index{function!rational}. Their domains are $(-\infty,\infty)$ (not including asymptotes and holes) and their ranges are $(-\infty,\infty)$.
 \end{definition}
 
 Like polynomials, rational functions have \textit{zeros}\index{function!rational!zeros} or roots when the numerator is equal to zero, but also zeros when the denominator of the function is equal to zero called \textit{poles}\index{function!rational!poles}. These describe discontinuous points as the the denominators reach zero resulting in holes (when a zero and a pole cancel) and an \textit{asymptote}\index{function!rational!asymptote} when the pole is not cancelled.
@@ -405,7 +405,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         \subsection{Trigonometric Functions}
         While the progression from linear to polynomial functions follows an algebraic development, trigonometric functions like $f(x) = \sin(x)$ and $f(x) = \cos(x)$ come from the fundamental geometric concepts of triangles and \textit{angle}\index{angle}. Angles, measured in \textit{radians}\index{angle!radian} or \textit{degrees}\index{angle!degree} where a full circle is measured have an angle of $2\pi$ radians or $360^circ$ ($360$ degrees). The measure of angles and inputs/outputs for trigonometric functions will always be assumed to be in radians unless specified. One radian is equal to the radius of the unit circle and wraps around the circumference of that circle $2\pi$ times and is defined using $\theta$ as the angle measure $\theta = \frac{s}{r}$ where $s$ is the arclength (see Figure \ref{anglemeasure}).
 
-        The definition of $\sin(\theta)$ and $\cos(\theta)$ comes from right triangle trigonometry, where $\theta$ is an acute angle (not the right angle). In the context of the unit circle, draw a radius from the origin forming an angle $\theta$ with the positive $x$-axis. From the point where the radius intersects the circle, drop a perpendicular to the $x$-axis to form a right triangle. The horizontal leg, labeled $x$, is the adjacent side to $\theta$, and the vertical leg, labeled $y$, is the opposite side. The hypotenuse is the radius $r$ of the circle. By definition, $\sin(\theta) = \frac{y}{r}$ and $\cos(\theta) = \frac{x}{r}$. On the unit circle, where $r = 1$, this simplifies to $\sin(\theta) = y$ and $\cos(\theta) = x$. Figure~\ref{anglemeasure} shows this triangle embedded in the circle.
+        The definition of the \textit{sine}\index{function!trigonometric!sine} and \textit{cosine}\index{function!trigonometric!cosine} functions come from right triangle trigonometry, where $\theta$ is an acute angle (not the right angle). In the context of the unit circle, draw a radius from the origin forming an angle $\theta$ with the positive $x$-axis. From the point where the radius intersects the circle, drop a perpendicular to the $x$-axis to form a right triangle. The horizontal leg, labeled $x$, is the adjacent side to $\theta$, and the vertical leg, labeled $y$, is the opposite side. The hypotenuse is the radius $r$ of the circle. By definition, $\sin(\theta) = \frac{y}{r}$ and $\cos(\theta) = \frac{x}{r}$. On the unit circle, where $r = 1$, this simplifies to $\sin(\theta) = y$ and $\cos(\theta) = x$. Figure~\ref{anglemeasure} shows this triangle embedded in the circle.
 
         \begin{figure}
             \centering
@@ -484,7 +484,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
             \tan(x) = \frac{\sin(x)}{\cos(x)}
         \end{equation}
 
-        The domain of the trigonometric tangent function is determined by the $\cos(x)$ in the denominator, where $\cos(x) = 0$ there is a vertical asymptote though it is still periodic. These asymptotes occur at $x = \frac{\pi}{2} + k\pi$ where $n \in \Z$. The graph of $\tan(x)$ can be seen in Figure \ref{fig:tangentgraph}.
+        The domain of the trigonometric \textit{tangent}\index{function!trigonometric!tangent} function is determined by the $\cos(x)$ in the denominator, where $\cos(x) = 0$ there is a vertical asymptote though it is still periodic. These asymptotes occur at $x = \frac{\pi}{2} + k\pi$ where $n \in \Z$. The graph of $\tan(x)$ can be seen in Figure \ref{fig:tangentgraph}.
 
         \begin{figure}
             \centering
@@ -501,26 +501,137 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
                         legend pos=north east,
                         trig format plots=rad,
                         samples=100,
-                        unbounded coords=jump,
+                        unbounded coords=jump
                     ]
                     % \addplot[color=black]{tan(x)};
                     \foreach \k in {-3,-2,...,3} {
-                        \pgfmathsetmacro{\start}{\k*pi-1.5};
-                        \pgfmathsetmacro{\end}  {\k*pi+1.5};
+                        \pgfmathsetmacro{\start}{\k*pi-1.5}
+                        \pgfmathsetmacro{\end}  {\k*pi+1.5}
                         \addplot[color=black, domain=\start:\end, samples=50]{tan(x)};
                         \addplot[color=red, dashed, domain=-5:5] coordinates {({\k*pi + pi/2}, -5) ({\k*pi + pi/2}, 5)};
                     }
-                    \legend{$\tan(x)$, Asymptotes}
+                    % \legend{$\tan(x)$, Asymptotes}
                 \end{axis}
             \end{tikzpicture}
             \caption{Graph of $\tan(x)$ with vertical asymptotes at $x = \frac{\pi}{2} + k\pi$}
             \label{fig:tangentgraph}
         \end{figure}
 
+        As noted with the sine, cosine, and tangent functions, these are periodic, meaning they identically repeat after a set period, this is further discussed in Section \ref{sect:periodicfunctions}.
+
         \subsection{Exponential and Logarithmic Functions}
+        The last family of functions we are going to present in this section are the \textit{exponential} and \textit{logarithmic}functions.
 
+        \begin{definition}
+            Functions of the form
+            \begin{equation}
+                f(x) = a^x
+            \end{equation}
 
-        \subsection{Systems of Equations}
+            where $a$ is the base, are called \textit{exponential}\index{function!exponential} functions. Their domain is $(-\infty,\infty)$ and range is $(0,\infty)$.
+        \end{definition}
+
+        Logarithmic are inverses (discussed in Section \ref{sect:periodicfunctions}) of exponents such that
+
+        \begin{equation}
+            \log_a(a^x) = x
+        \end{equation}
+
+        \noindent where $a$ is the base of the logarithm. Logarithms essentially compute the power required to bring the base to a specified number. For example $log_2(4) = 2$ and $log_3(81) = 4$.
+
+        \begin{definition}
+            Functions of the form
+
+            \begin{equation}
+                f(x) = \log_a(x)
+            \end{equation}
+
+            where $a$ is the base, are called \textit{logarithmic}\index{function!logarithmic} functions. The domain for the logarithm is $(0,\infty)$ and the range is $(-\infty,\infty)$.
+        \end{definition}
+
+        The graphs of exponents and logarithms with various bases are shown in Figure \ref{fig:exploggraphs}.
+
+        \begin{figure}
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                        xmin=-3, xmax=3,
+                        ymin=-3, ymax=3,
+                        axis lines=middle,
+                        xlabel=$x$,
+                        ylabel=$y$,
+                        legend pos=outer north east,
+                        trig format plots=rad,
+                        domain=-3:3,
+                    ]
+                    \addplot[color=red, samples=100] {2^x};
+                    \addplot[color=red,dashed, samples=100] {log2(x)};
+                    \addplot[color=green, samples=100] {3^x};
+                    \addplot[color=green, dashed,samples=100] {ln(x)/ln(3)};
+                    \addplot[color=blue, samples=100] {4^x};
+                    \addplot[color=blue, dashed,samples=100] {ln(x)/ln(4)};
+
+                    \legend{$f(x)=2^x$,$f(x)=log_2(x)$,$f(x)=3^x$,$f(x)=log_3(x)$,$f(x)=4^x$,$f(x)=log_4(x)$,}
+                \end{axis}
+            \end{tikzpicture}
+            \caption{Graphs of Exponential and Logarithmic Functions with various bases, $f(x) = a^x$ and $f(x) = log_a(x)$ for $a \in \{2,3,4\}$.}
+            \label{fig:exploggraphs}
+        \end{figure}
+
+        Special exponential and logarithmic functions have the base of $e \approx 2.71828...$\index{Euler's Number} which is Euler's number. This results in the following functions $f(x) = e^x$ for the exponential and using special notation $f(x) = \log_e(x)=\ln(x)$ and of course $\ln(e^x)=x$. These functions show up in numerous real world situations such as exponential growth/decay and sound decibels.
+
+        \begin{example}
+            Exponential growth and decay take the form of $f(x) = a(1+r)^x$, where $a$ is the initial amount, $r$ is the growth rate, and $x$ is the time interval. Growth is modeled with a positive $r > 0$ and decay with a negative $r < 0$. Choosing $a = 100$ and $r = \pm 0.1$, results in the following growth and decay graphs in Figure \ref{fig:growthdecay}.
+
+            \begin{figure}
+                \centering
+                \begin{tikzpicture}
+                    \begin{axis}[
+                            xmin=0, xmax=50,
+                            ymin=0, ymax=250,
+                            axis lines=middle,
+                            xlabel=$x$,
+                            ylabel=$y$,
+                            legend pos=north east,
+                            trig format plots=rad,
+                            domain=0:50,
+                        ]
+                        \addplot[color=red, samples=100] {100*(1+0.1)^x};
+                        \addplot[color=blue, samples=100] {100*(1-0.1)^x};
+                        \legend{$f(x)=100(1.1)^x$,$f(x)=100(0.9)^x$}
+                    \end{axis}
+                \end{tikzpicture}
+                \caption{Graphs Showing Exponential Growth and Decay, $f(x)=100(1.1)^x$ and $f(x)=100(0.9)^x$}
+                \label{fig:growthdecay}
+            \end{figure}
+        \end{example}
+
+        \begin{example}
+            An example of logarithms being used for modeling real world phenomena is the pH scale in chemistry $pH(H^+) = log_{10}(H^+)$ where $H^+$ is the number of hydrogen ions are in a solution. This essentially determines the order of magnitude (exponent of 10) of the number of hydrogen ions there are. The graph of this function is shown in Figure \ref{fig:pHgraph}.
+
+            \begin{figure}
+                \centering
+                \begin{tikzpicture}
+                    \begin{axis}[
+                            xmin=0, xmax=25,
+                            ymin=-2, ymax=2,
+                            axis lines=middle,
+                            xlabel=$x$,
+                            ylabel=$y$,
+                            legend pos=north east,
+                            trig format plots=rad,
+                            domain=0.0001:25,
+                        ]
+                        \addplot[color=red, samples=100] {log10(x)};
+                    \end{axis}
+                \end{tikzpicture}
+                \caption{Graph Showing the pH Scale, $pH(H^+) = log_{10}(H^+)$}
+                \label{fig:pHgraph}
+            \end{figure}
+
+            % TODO: check this
+        \end{example}
+        % \subsection{Systems of Equations}
 
         \section{Types of Functions}
         It is important to be able to distinguish functions and classify their behaviors into distinct characteristics in order to properly analyze them. Characteristics such as symmetry (evenness and oddness of a function) and periodicity (repeating functions) are defined in such ways that may give insight into solving certain problems or giving us the opportunity to exploit their definitions.
@@ -561,6 +672,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         \end{definition}
 
         \subsection{Periodic Functions}
+        \label{sect:periodicfunctions}
         \begin{definition}
             A function is said to be a \textit{period function}\index{function!periodic} if and only if for some value $a$,
             $$
@@ -574,3 +686,4 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         \subsection{Function Translation}
         \subsection{Fuction Composition}
         \subsection{Function Inverses}
+        \label{sect:function inverses}
