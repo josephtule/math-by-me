@@ -224,7 +224,13 @@ Functions, namely those defined via mathematical formulas, can be classified int
 Beginning with the most elementary form of functions created using mathematical formulas is the \textit{linear function}\index{function!linear} or the equation for a line.
 
 \begin{definition}
-    Functions of the form $f(x) = mx + b$, where $m$ is the slope and $b$ is the $y$-intercept, are \textit{linear functions}.
+    Functions of the form
+
+    \begin{equation}
+        f(x) = mx + b
+    \end{equation}
+
+    \noindent where $m$ is the slope and $b$ is the $y$-intercept, are \textit{linear functions}.
 \end{definition}
 
 The graphs of linear functions are straight lines, if the domain of the function is $\R$, then the graph of $f$ extends from $-\infty$ to $+\infty$. It's slope determines the angle of the line and can be reconstructed with any two points on the line with the following formula
@@ -258,7 +264,13 @@ The graphs of linear functions are straight lines, if the domain of the function
 Quadratic functions are the next natural progression after linear functions. The simplest form of a quadratic function $f(x) = x^2$ consists of $x$ multiplied by itself. The graph of a quadratic equation is a \textit{parabola}\index{function!quadratic!parabola} and can be seen in Figure \ref{f(x)=x^2-1graph}.
 
 \begin{definition}
-    Functions of the form $f(x) = ax^2 + bx + c$ are \textit{quadratic functions}\index{function!quadratic}, this is the standard form for a quadratic function. Alternative forms to the standard quadratic function are the root form $f(x) = (x-a)(x-b)$ where $a$ and $b$ are the $x$-intercepts of the function and the vertex form $f(x) = a(x-h)^2+k$ where the point $h,k$ is the vertex of the parabola.
+    Functions of the form
+
+    \begin{equation}
+        f(x) = ax^2 + bx + c
+    \end{equation}
+
+    \noindent are \textit{quadratic functions}\index{function!quadratic}, this is the standard form for a quadratic function. Alternative forms to the standard quadratic function are the root form $f(x) = (x-a)(x-b)$ where $a$ and $b$ are the $x$-intercepts of the function and the vertex form $f(x) = a(x-h)^2+k$ where the point $h,k$ is the vertex of the parabola.
 \end{definition}
 
 Quadratic functions have some useful properties such as the root(s) of the parabola (the $x$-intercept(s)) as well as having an explicit formula for computing the root(s) of the function known as the \textit{quadratic formula}\index{function!quadratic!formula}. The quadratic formula solves for the $x$-coordinate(s) of the roots for a given quadratic function (where $y=0$)
@@ -274,9 +286,9 @@ Quadratic functions have some useful properties such as the root(s) of the parab
 
     \noindent Given an object with initial height $h_0$ and initial vertical velocity $v_0$, its height at time $t$ is modeled by
 
-    \begin{equation}
-        h(t) = -\frac{1}{2}gt^2 + v_0 t + h_0
-    \end{equation}
+    $$
+    h(t) = -\frac{1}{2}gt^2 + v_0 t + h_0
+    $$
 
     \noindent where $h(t)$ is the height at time $t$, $g$ is the the acceleration due to gravity ($g \approx 9.81 \text{m/s}^2$) at Earth's surface, and air resistance is neglected. The graph showing the height of a particle thrown from a height of $20$ meters and at an initial vertical velocity of $2$ m/s$^2$ is shown in Figure \ref{ballistictrajectory}.
 
@@ -297,7 +309,12 @@ Quadratic functions have some useful properties such as the root(s) of the parab
 Generalizing upon the linear and quadratic functions further, polynomial functions are the next step.
 
 \begin{definition}
-    Functions of the form $f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0$ are \textit{polynomial functions}\index{function!polynomial}. Where $n$ is the \textit{degree}\index{function!polynomial!degree} of the polynomial (whne $a_n \neq 0$) and $a_i$ for $i \in {0,1,\dots,n-1,n}$ are the coefficients.
+    Functions of the form
+    \begin{equation}
+        f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0
+    \end{equation}
+
+    \noindent are \textit{polynomial functions}\index{function!polynomial}. Where $n$ is the \textit{degree}\index{function!polynomial!degree} of the polynomial (whne $a_n \neq 0$) and $a_i$ for $i \in {0,1,\dots,n-1,n}$ are the coefficients.
 \end{definition}
 
 Similar to quadratic functions, polynomials have up to $n$ roots but do not have an explicit formula to compute those roots for polynomials with degree $n > 3$. Linear functions and quadratic functions can be considered special cases of polynomial functions with degree $n=1$ and $n=2$ respectively. Common higher-order polynomials are \textit{cubic functions}\index{function!polynomial!cubic} $n=3$, \textit{quartic functions}\index{function!polynomial!quartic} $n=4$, and \textit{quintic functions}\index{function!polynomial!quintic} $n=5$. A useful property of polynomials is that there are at most $n$ roots for a polynomial of degree $n$, note that when a polynomial has less (real and complex) roots than its degree, one of its roots may have a multiplicity greater than one meaning that it is repeated. For example, the polynomial (in root form) $f(x) = (x+1)(x+1)(x+1) = (x+1)^3 = x^3 + 3x^2 + 3x + 1$ has all three roots at $x=-1$ which means that the root $(x=-1,y=0)$ has multiplicity of 3.
@@ -334,106 +351,226 @@ Similar to quadratic functions, polynomials have up to $n$ roots but do not have
 Rational functions branch from polynomials in a similar way to how rational numbers branch from the integers as they are constructed by dividing one polynomial by another.
 
 \begin{definition}
-    The function of the form $f(x) = \frac{p(x)}{q(x)}$ where $p(x)$ and $q(x) \neq 0$ are polynomial functions are known as \textit{rational functions}\index{function!rational}.
+    The function of the form
+
+    \begin{equation}
+        f(x) = \frac{p(x)}{q(x)}
+    \end{equation}
+
+    \noindent where $p(x)$ and $q(x) \neq 0$ are polynomial functions are known as \textit{rational functions}\index{function!rational}.
 \end{definition}
 
 Like polynomials, rational functions have \textit{zeros}\index{function!rational!zeros} or roots when the numerator is equal to zero, but also zeros when the denominator of the function is equal to zero called \textit{poles}\index{function!rational!poles}. These describe discontinuous points as the the denominators reach zero resulting in holes (when a zero and a pole cancel) and an \textit{asymptote}\index{function!rational!asymptote} when the pole is not cancelled.
 
 \begin{example} An example of a rational function that has both holes and asymptotes is
-    \begin{equation}
-        f(x) = \frac{(x-1)(x+1)(x+2)}{(x-1)(x+1)(x-2)}
-    \end{equation}
+    $$
+    f(x) = \frac{(x-1)(x+1)(x+2)}{(x-1)(x+1)(x-2)}
+    $$
 
     \noindent This function has holes at $x = \pm 1$ where the poles and zeros cancel out asymptotes at $x = 2$ where the denominator becomes zero and $y = 1$ for the horizontal asymptote. The graph for this function is shown in Figure \ref{fig:rationalholeandasymptote}.
 
-\begin{figure}[!ht]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                xmin=-7, xmax=7,
-                ymin=-7, ymax=7,
-                axis lines=middle,
-                xlabel=$x$,
-                ylabel=$y$,
-                legend pos=outer north east,
-                restrict y to domain=-10:10, % Prevents asymptote overflow
-            ]
-            \draw[dashed, red] (axis cs:2,-7) -- (axis cs:2,7);
-            \draw[dashed, blue] (axis cs:-7,1) -- (axis cs:7,1);
-            
-            \addplot[color=black, domain=-7:1.99, samples=50, unbounded coords=jump]
+    \begin{figure}[!ht]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                    xmin=-7, xmax=7,
+                    ymin=-7, ymax=7,
+                    axis lines=middle,
+                    xlabel=$x$,
+                    ylabel=$y$,
+                    legend pos=outer north east,
+                    restrict y to domain=-10:10, % Prevents asymptote overflow
+                ]
+                \draw[dashed, red] (axis cs:2,-7) -- (axis cs:2,7);
+                \draw[dashed, blue] (axis cs:-7,1) -- (axis cs:7,1);
+
+                \addplot[color=black, domain=-7:1.99, samples=50, unbounded coords=jump]
                 {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2)};
-            \addplot[color=black, domain=2.01:7, samples=50, unbounded coords=jump]
-                {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2)};
-            
-            % Holes at x=1 and x=-1
-            \addplot[only marks, mark=*, mark options={fill=white, draw=black}]
-                coordinates {
-                    (1, -3)    % Hole at x=1 (lim_{x→1} f(x) = -3)
-                    (-1, -1/3) % Hole at x=-1 (lim_{x→-1} f(x) = -1/3)
-                };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Rational function $f(x) = \frac{(x-1)(x+1)(x+2)}{(x-1)(x+1)(x-2)}$ with holes at $(1,-3)$ and $(-1,-\frac{1}{3})$, vertical asymptote at $x=2$, and horizontal asymptote at $y=1$}
-    \label{fig:rationalholeandasymptote}
-\end{figure}
-\end{example}
+                    \addplot[color=black, domain=2.01:7, samples=50, unbounded coords=jump]
+                    {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2)};
 
-\subsection{Trigonometric Functions}
-Breaking away from the progression found from starting with linear functions and ending with polynomials
+                        % Holes at x=1 and x=-1
+                        \addplot[only marks, mark=*, mark options={fill=white, draw=black}]
+                        coordinates {
+                            (1, -3)    % Hole at x=1 (lim_{x→1} f(x) = -3)
+                            (-1, -1/3) % Hole at x=-1 (lim_{x→-1} f(x) = -1/3)
+                        };
+                    \end{axis}
+                \end{tikzpicture}
+                \caption{Rational function $f(x) = \frac{(x-1)(x+1)(x+2)}{(x-1)(x+1)(x-2)}$ with holes at $(1,-3)$ and $(-1,-\frac{1}{3})$, vertical asymptote at $x=2$, and horizontal asymptote at $y=1$}
+                \label{fig:rationalholeandasymptote}
+            \end{figure}
+        \end{example}
 
-\subsection{Power, Exponential, and Logarithmic Functions}
-\subsection{Systems of Equations}
+        \subsection{Trigonometric Functions}
+        While the progression from linear to polynomial functions follows an algebraic development, trigonometric functions like $f(x) = \sin(x)$ and $f(x) = \cos(x)$ come from the fundamental geometric concepts of triangles and \textit{angle}\index{angle}. Angles, measured in \textit{radians}\index{angle!radian} or \textit{degrees}\index{angle!degree} where a full circle is measured have an angle of $2\pi$ radians or $360^circ$ ($360$ degrees). The measure of angles and inputs/outputs for trigonometric functions will always be assumed to be in radians unless specified. One radian is equal to the radius of the unit circle and wraps around the circumference of that circle $2\pi$ times and is defined using $\theta$ as the angle measure $\theta = \frac{s}{r}$ where $s$ is the arclength (see Figure \ref{anglemeasure}).
 
-\section{Types of Functions}
-It is important to be able to distinguish functions and classify their behaviors into distinct characteristics in order to properly analyze them. Characteristics such as symmetry (evenness and oddness of a function) and periodicity (repeating functions) are defined in such ways that may give insight into solving certain problems or giving us the opportunity to exploit their definitions.
+        The definition of $\sin(\theta)$ and $\cos(\theta)$ comes from right triangle trigonometry, where $\theta$ is an acute angle (not the right angle). In the context of the unit circle, draw a radius from the origin forming an angle $\theta$ with the positive $x$-axis. From the point where the radius intersects the circle, drop a perpendicular to the $x$-axis to form a right triangle. The horizontal leg, labeled $x$, is the adjacent side to $\theta$, and the vertical leg, labeled $y$, is the opposite side. The hypotenuse is the radius $r$ of the circle. By definition, $\sin(\theta) = \frac{y}{r}$ and $\cos(\theta) = \frac{x}{r}$. On the unit circle, where $r = 1$, this simplifies to $\sin(\theta) = y$ and $\cos(\theta) = x$. Figure~\ref{anglemeasure} shows this triangle embedded in the circle.
 
-\subsection{Piecewise Functions and Absolute Values}
-\subsection{Even and Odd Functions}
-\begin{definition}
-    A function $f(x)$ is said to be an \textit{even function}\index{function!even} of the independent variable $x$ if and only if
-    $$
-    f(-x) = f(x)
-    $$
-    for all $x$ in the function's domain.
-\end{definition}
+        \begin{figure}
+            \centering
+            \begin{tikzpicture}
+                \def\myrad{3}
+                \def\myang{60}
 
-\begin{definition}
-    A function $f(x)$ is said to be an \textit{odd function}\index{function!odd} of the independent variable $x$ if and only if
-    $$
-    f(-x) = -f(x)
-    $$
-    for all $x$ in the function's domain.
-\end{definition}
+                % Compute x-coordinate of foot of perpendicular
+                \pgfmathsetmacro{\xproj}{\myrad * cos(\myang)}
+                \pgfmathsetmacro{\yproj}{\myrad * sin(\myang)}
 
-\subsection{Increasing and Decreasing Functions}
-\begin{definition}
-    A function $f$ is \textit{increasing}\index{function!increasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
-    $$
-    f(x_1) \leq f(x_2).
-    $$
-    If the inequality is strict ($f(x_1) < f(x_2)$), we say $f$ is \textit{strictly increasing}\index{function!strictly increasing}.
-\end{definition}
+                \coordinate (O) at (0,0);
+                \coordinate (A) at (\myrad,0);
+                \coordinate (B) at (\myang:\myrad);
+                \coordinate (C) at (\xproj,0);
 
-\begin{definition}
-    A function $f$ is \textit{decreasing}\index{function!decreasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
-    $$
-    f(x_1) \geq f(x_2).
-    $$
-    If the inequality is strict ($f(x_1) > f(x_2)$), we say $f$ is \textit{strictly decreasing}\index{function!strictly decreasing}.
-\end{definition}
+                % Circle and center
+                \draw (O) node[circle,inner sep=1.5pt,fill] {} circle[radius=\myrad];
 
-\subsection{Periodic Functions}
-\begin{definition}
-    A function is said to be a \textit{period function}\index{function!periodic} if and only if for some value $a$,
-    $$
-    f(x) = f(x+a)
-    $$
-    where $a$ is the period of the function. The period defines the magnitude of the independent variable required for the function to repeat.
-\end{definition}
+                % Radius lines
+                \draw (O) -- node[midway,below] {$r$} (A);
+                \draw (O) -- node[midway,left] {$r$} (B);
 
-\section{Function Transformations and Operations}
-\subsection{Function Arithmetic}
-\subsection{Function Translation}
-\subsection{Fuction Composition}
-\subsection{Function Inverses}
+                % Angle arc
+                \pic [draw,->,angle radius=1cm,"$\theta$"] {angle=A--O--B};
+
+                % Arclength arc
+                \draw[|-|]
+                (\myrad+0.3,0)
+                arc[start angle=0,end angle=\myang,radius=\myrad+0.3]
+                node[midway,fill=white] {$s$};
+
+                % Triangle
+                \draw[dashed] (B) -- (C);
+                \draw (C) -- (A);
+
+                % Triangle side labels
+                \node[below] at ($(A)!1.5!(C)$) {$a$}; % horizontal leg
+                \node[right] at ($(B)!0.5!(C)$) {$o$}; % vertical leg
+
+                % Labels
+                \node[below right] at (A) {$A$};
+                \node[above right = 4pt and -10pt] at (B) {$B$};
+                \node[below] at (O) {$C$};
+            \end{tikzpicture}
+            \caption{Unit circle showing angle $\theta$, radius $r$, arclength $s$, and a right triangle.}
+            \label{anglemeasure}
+        \end{figure}
+
+        The main two trigonometric functions $f(x) = \sin(x)$ and $f(x) = \cos(x)$, unlike the previously mentioned functions, have restricted ranges as their values vary within the interval $[-1,1]$. Their graphs can be seen in Figure \ref{fig:triggraph}.
+
+        \begin{figure}
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                        xmin=-2*pi, xmax=2*pi,
+                        ymin=-1.5, ymax=1.5,
+                        axis lines=middle,
+                        xlabel=$x$,
+                        ylabel=$y$,
+                        legend pos=outer north east,
+                        trig format plots=rad,
+                    ]
+                    \addplot[color=red, samples=100,domain=-2*pi:2*pi] {sin(x)};
+                    \addplot[color=blue, samples=100,domain=-2*pi:2*pi] {cos(x)};
+                    \legend{$sin(x)$,$cos(x)$}
+                \end{axis}
+            \end{tikzpicture}
+            \caption{Graphs of $\sin(x)$ and $\cos(x)$}
+            \label{fig:triggraph}
+        \end{figure}
+
+        From the basic trigonometric functions, an additional function $f(x) = \tan(x)$ can be constructed with the following formula
+
+        \begin{equation}
+            \tan(x) = \frac{\sin(x)}{\cos(x)}
+        \end{equation}
+
+        The domain of the trigonometric tangent function is determined by the $\cos(x)$ in the denominator, where $\cos(x) = 0$ there is a vertical asymptote though it is still periodic. These asymptotes occur at $x = \frac{\pi}{2} + k\pi$ where $n \in \Z$. The graph of $\tan(x)$ can be seen in Figure \ref{fig:tangentgraph}.
+
+        \begin{figure}
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                        xmin=-2*pi, xmax=2*pi,
+                        ymin=-4, ymax=4,
+                        axis lines=middle,
+                        xlabel=$x$,
+                        ylabel=$y$,
+                        xtick={-2*pi, -3*pi/2, -pi, -pi/2, 0, pi/2, pi, 3*pi/2, 2*pi},
+                        xticklabels={$-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$},
+                        ytick={-4,-3,...,4},
+                        legend pos=north east,
+                        trig format plots=rad,
+                        samples=100,
+                        unbounded coords=jump,
+                    ]
+                    % \addplot[color=black]{tan(x)};
+                    \foreach \k in {-3,-2,...,3} {
+                        \pgfmathsetmacro{\start}{\k*pi-1.5};
+                        \pgfmathsetmacro{\end}  {\k*pi+1.5};
+                        \addplot[color=black, domain=\start:\end, samples=50]{tan(x)};
+                        \addplot[color=red, dashed, domain=-5:5] coordinates {({\k*pi + pi/2}, -5) ({\k*pi + pi/2}, 5)};
+                    }
+                    \legend{$\tan(x)$, Asymptotes}
+                \end{axis}
+            \end{tikzpicture}
+            \caption{Graph of $\tan(x)$ with vertical asymptotes at $x = \frac{\pi}{2} + k\pi$}
+            \label{fig:tangentgraph}
+        \end{figure}
+
+        \subsection{Exponential and Logarithmic Functions}
+
+
+        \subsection{Systems of Equations}
+
+        \section{Types of Functions}
+        It is important to be able to distinguish functions and classify their behaviors into distinct characteristics in order to properly analyze them. Characteristics such as symmetry (evenness and oddness of a function) and periodicity (repeating functions) are defined in such ways that may give insight into solving certain problems or giving us the opportunity to exploit their definitions.
+
+        \subsection{Piecewise Functions and Absolute Values}
+        \subsection{Even and Odd Functions}
+        \begin{definition}
+            A function $f(x)$ is said to be an \textit{even function}\index{function!even} of the independent variable $x$ if and only if
+            $$
+            f(-x) = f(x)
+            $$
+            for all $x$ in the function's domain.
+        \end{definition}
+
+        \begin{definition}
+            A function $f(x)$ is said to be an \textit{odd function}\index{function!odd} of the independent variable $x$ if and only if
+            $$
+            f(-x) = -f(x)
+            $$
+            for all $x$ in the function's domain.
+        \end{definition}
+
+        \subsection{Increasing and Decreasing Functions}
+        \begin{definition}
+            A function $f$ is \textit{increasing}\index{function!increasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
+            $$
+            f(x_1) \leq f(x_2).
+            $$
+            If the inequality is strict ($f(x_1) < f(x_2)$), we say $f$ is \textit{strictly increasing}\index{function!strictly increasing}.
+        \end{definition}
+
+        \begin{definition}
+            A function $f$ is \textit{decreasing}\index{function!decreasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
+            $$
+            f(x_1) \geq f(x_2).
+            $$
+            If the inequality is strict ($f(x_1) > f(x_2)$), we say $f$ is \textit{strictly decreasing}\index{function!strictly decreasing}.
+        \end{definition}
+
+        \subsection{Periodic Functions}
+        \begin{definition}
+            A function is said to be a \textit{period function}\index{function!periodic} if and only if for some value $a$,
+            $$
+            f(x) = f(x+a)
+            $$
+            where $a$ is the period of the function. The period defines the magnitude of the independent variable required for the function to repeat.
+        \end{definition}
+
+        \section{Function Transformations and Operations}
+        \subsection{Function Arithmetic}
+        \subsection{Function Translation}
+        \subsection{Fuction Composition}
+        \subsection{Function Inverses}
