@@ -1,13 +1,15 @@
 \chapter{Functions}
 
 \section{Sets}
-Before defining what a function is or what it does, it is important to briefly discuss what goes into function and what comes out. Simply, \textit{sets}\index{set} are a collection of items and each one of those items are usually referred to as \textit{elements}\index{set!element}. Without getting into the weeds of set theory, sets can contain pretty much anything from numbers, functions, and other sets \cite{bookofproof}.
+Before defining what a function is or what it does, it is important to briefly discuss what goes into function and what comes out. Simply, \textbf{sets}\index{set} are a collection of items and each one of those items are usually referred to as \textbf{elements}\index{set!element}. Without getting into the weeds of set theory, sets can contain pretty much anything from numbers, functions, and other sets \cite{bookofproof}.
 
-Some common sets that you may be familiar with are the \textit{natural numbers} $\N = \{1,2,3,4,5,\dots\}$, the \textit{integers} $\Z = \{\dots,-2,-1,0,1,2,\dots\}$, and the \textit{real numbers} $\R$, which is usually represented via a number line. Sets can also be intervals on the real line (i.e. [a,b) is an interval on $\R$ containing $a$ but not $b$) or even the possible results of flipping a coin $C = \{H,T\}$.
+Some common sets that you may be familiar with are the \textbf{natural numbers} $\N = \{1,2,3,4,5,\dots\}$, the \textbf{integers} $\Z = \{\dots,-2,-1,0,1,2,\dots\}$, and the \textbf{real numbers} $\R$, which is usually represented via a number line. Sets can also be intervals on the real line (i.e. [a,b) is an interval on $\R$ containing $a$ but not $b$) or even the possible results of flipping a coin $C = \{H,T\}$.
+
+\medskip
 
 We will now define the basic notation when dealing with sets and the operations that can be performed on sets. We say that $x$ is an element of a set $A$ with the notation $x \in A$ and when $x$ is not in $A$, we say $x \not\in A$. For example, given the set $A = \{1,2,3,4\}$, we can say that $1 \in A$ is true as well as $5 \not\in A$.
 
-The notion of combining sets comes with \textit{unions}\index{set!union} and \textit{intersections}\index{set!intersection}. Given $A$ and $B$ are sets, the union of $A$ and $B$ is denoted as $A \cup B$ and is equal to the set the contains elements in either $A$ or $B$. Similarly, the intersection between $A$ and $B$ is denoted as $A \cap B$ and is the set that contains elements that are in both $A$ and $B$. For example, given the sets $A = \{1,2,3,4\}$ and $B = \{3,4,5,6\}$, the union and intersection between $A$ and $B$ is
+The notion of combining sets comes with \textbf{unions}\index{set!union} and \textbf{intersections}\index{set!intersection}. Given $A$ and $B$ are sets, the union of $A$ and $B$ is denoted as $A \cup B$ and is equal to the set the contains elements in either $A$ or $B$. Similarly, the intersection between $A$ and $B$ is denoted as $A \cap B$ and is the set that contains elements that are in both $A$ and $B$. For example, given the sets $A = \{1,2,3,4\}$ and $B = \{3,4,5,6\}$, the union and intersection between $A$ and $B$ is
 
 \begin{aequation}
     A \cup B &= \{1,2,3,4,5,6\} \\
@@ -16,13 +18,15 @@ The notion of combining sets comes with \textit{unions}\index{set!union} and \te
 
 Subsets are often used to relate different sets and their elements. A set $A$ is said to be a subset of another set $B$ if all of the elements of $A$ are also within $B$ and is denoted as $A \subseteq B$ and a set $A$ is equal to a set $B$ if and only if $A \subseteq B$ and $B \subseteq A$. An important subset is the empty set represented by the symbols $\varnothing$, $\emptyset$, or simply $\{\}$. It is important to note that the empty set is also a subset of all sets.
 
+\medskip
+
 Using sets by listing them out can become cumbersome and sometimes confusing, instead set builder notation is used to build a set based on a rule. For example, the set of all positive even integers can be written as
 
 \begin{equation}
     A = \{2,4,6,8,\dots\} = \{z : z \text{ is an positive even integer}\} = \{z : z = 2n, n\in\Z \text{ and } n > 0\}
 \end{equation}
 
-\noindent Here, the $:$ stands for "such that" which indicates the rule (the words "such that" or the symbol $|$ is also often used). The \textit{rational numbers} $\Q$ can also be constructed via the integers with
+\noindent Here, the "$:$" stands for "such that" which indicates the rule (the words "such that" or the symbol $|$ is also often used). The \textbf{rational numbers} $\Q$ can also be constructed via the integers with
 
 \begin{equation}
     \Q = \left\{\frac{p}{q} : p,q \in \Z \text{ and } q \neq 0\right\}
@@ -50,7 +54,9 @@ As mentioned previously, intervals on the real number line can be represented as
 
 \noindent Here, the open brackets $($ and $)$ indicate that the respective endpoint is not included, while the closed brackets $[$ and $]$ indicate that the respective endpoint is included in the interval.
 
-The \textit{Cartesian product}\index{set!Cartesian product} (also known as the \textit{direct product}\index{set!direct product}) is used often to describe ordered pairs or even higher-dimension coordinates. Some examples include the $xy$-plane also known as $\R^2$, 3D space with $\R^3$. The Cartesian product for two sets $A$ and $B$ is defined as
+\medskip
+
+The \textbf{Cartesian product}\index{set!Cartesian product} (also known as the \textbf{direct product}\index{set!direct product}) is used often to describe ordered pairs or even higher-dimension coordinates. Some examples include the $xy$-plane also known as $\R^2$, 3D space with $\R^3$. The Cartesian product for two sets $A$ and $B$ is defined as
 
 \begin{equation}
     A \times B = \{(a,b) : a \in A, b \in B\}
@@ -76,10 +82,10 @@ For further and more formal discussion on sets and naive set theory as well as f
 \subsection{Exercises}
 
 \section{What is a function?}
-\textit{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the unique elements of $X$, called the \textit{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textit{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$" \cite{understandinganalysis}), where $y \in R \subseteq Y$ is known as the \textit{dependent variable}\index{function!dependent variable} with $R$ as the range of the function and $x \in X$ is known as the \textit{independent variable}\index{function!independent variable} or the \textit{argument}\index{function!argument} of the function. The \textit{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of the codomain $Y$ but is not always equal. Formally, the definition is as follows
+\textbf{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the unique elements of $X$, called the \textbf{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textbf{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$" \cite{understandinganalysis}), where $y \in R \subseteq Y$ is known as the \textbf{dependent variable}\index{function!dependent variable} with $R$ as the range of the function and $x \in X$ is known as the \textbf{independent variable}\index{function!independent variable} or the \textbf{argument}\index{function!argument} of the function. The \textbf{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of the codomain $Y$ but is not always equal. Formally, the definition is as follows
 
 \begin{definition}
-    A \textit{function} is a mapping or rule that assigns each element from a set called the domain $X$ of the function to a unique element in the range $R = f(X)$ of the function which is a subset of the codomain $R \subseteq Y$ and the element $x \in X$ is mapped to an element in $y \in R \subseteq Y$ with $x \mapsto y$.
+    A \textbf{function} is a mapping or rule that assigns each element from a set called the domain $X$ of the function to a unique element in the range $R = f(X)$ of the function which is a subset of the codomain $R \subseteq Y$ and the element $x \in X$ is mapped to an element in $y \in R \subseteq Y$ with $x \mapsto y$.
 \end{definition}
 
 Further emphasis must be made on the elements $y = f(x)$. The function $f(x)$ maps the element $x \in X$ to exactly one element $y \in Y$ \cite{elemrealandcomplex}. For single variable functions, this can be tested using the vertical line test on a function's graph (covered shortly). If a formula results in two answers with one input (i.e. the equation for a circle: $x^2 + y^2 = r$ gives two points of $y$ for each $x$) it is no longer considered a function. Figure \ref{functionmapping} shows how a function maps elements of the domain to the range.
@@ -136,7 +142,7 @@ Further emphasis must be made on the elements $y = f(x)$. The function $f(x)$ ma
 
 \subsection{Graphs of Functions}
 
-Another way to represent functions is with its \textit{graph}\index{function!graph} which is a set of points consisting of the input and its corresponding output and is represented with the set of ordered pairs $\{(x,y) : y = f(x), x\in\R\}$ for functions that accept real numbers.
+Another way to represent functions is with its \textbf{graph}\index{function!graph} which is a set of points consisting of the input and its corresponding output and is represented with the set of ordered pairs $\{(x,y) : y = f(x), x\in\R\}$ for functions that accept real numbers.
 
 \begin{example}
     A familiar example is the linear function $f(x) = mx + b$ where $m$ is the slope of the line and $b$ is the vertical offset. Suppose $m = 1$ and $b = 0$, we get the following graph for the function $f(x) = x$ in Figure \ref{f(x)=x graph}
@@ -221,7 +227,7 @@ This conceptual foundation of what a  function is prepares us for the introducti
 Functions, namely those defined via mathematical formulas, can be classified into function families whose members share common features, forms, and properties. Some such families often differ only in coefficients and others may change the base in which they operate. The following types of functions are used frequently in the study of calculus.
 
 \subsection{Linear Functions}
-Beginning with the most elementary form of functions created using mathematical formulas is the \textit{linear function}\index{function!linear} or the equation for a line.
+Beginning with the most elementary form of functions created using mathematical formulas is the \textbf{linear function}\index{function!linear} or the equation for a line.
 
 \begin{definition}
     Functions of the form
@@ -230,7 +236,7 @@ Beginning with the most elementary form of functions created using mathematical 
         f(x) = mx + b
     \end{equation}
 
-    \noindent where $m$ is the slope and $b$ is the $y$-intercept, are \textit{linear functions}. The domain and range of linear functions is all the real numbers, $(-\infty,\infty)$.
+    \noindent where $m$ is the slope and $b$ is the $y$-intercept, are \textbf{linear functions}. The domain and range of linear functions is all the real numbers, $(-\infty,\infty)$.
 \end{definition}
 
 The graphs of linear functions are straight lines, if the domain of the function is $\R$, then the graph of $f$ extends from $-\infty$ to $+\infty$. It's slope determines the angle of the line and can be reconstructed with any two points on the line with the following formula
@@ -261,7 +267,7 @@ The graphs of linear functions are straight lines, if the domain of the function
 % TODO: add more discussion here
 
 \subsection{Quadratic Functions}
-Quadratic functions are the next natural progression after linear functions. The simplest form of a quadratic function $f(x) = x^2$ consists of $x$ multiplied by itself. The graph of a quadratic equation is a \textit{parabola}\index{function!quadratic!parabola} and can be seen in Figure \ref{f(x)=x^2-1graph}.
+Quadratic functions are the next natural progression after linear functions. The simplest form of a quadratic function $f(x) = x^2$ consists of $x$ multiplied by itself. The graph of a quadratic equation is a \textbf{parabola}\index{function!quadratic!parabola} and can be seen in Figure \ref{f(x)=x^2-1graph}.
 
 \begin{definition}
     Functions of the form
@@ -270,19 +276,19 @@ Quadratic functions are the next natural progression after linear functions. The
         f(x) = ax^2 + bx + c
     \end{equation}
 
-    \noindent are \textit{quadratic functions}\index{function!quadratic}, this is the standard form for a quadratic function. Alternative forms to the standard quadratic function are the root form $f(x) = (x-a)(x-b)$ where $a$ and $b$ are the $x$-intercepts of the function and the vertex form $f(x) = a(x-h)^2+k$ where the point $h,k$ is the vertex of the parabola. The domain and range of quadratic functions span the entirety of the real numbers.
+    \noindent are \textbf{quadratic functions}\index{function!quadratic}, this is the standard form for a quadratic function. Alternative forms to the standard quadratic function are the root form $f(x) = (x-a)(x-b)$ where $a$ and $b$ are the $x$-intercepts of the function and the vertex form $f(x) = a(x-h)^2+k$ where the point $h,k$ is the vertex of the parabola. The domain and range of quadratic functions span the entirety of the real numbers.
 \end{definition}
 
-Quadratic functions have some useful properties such as the root(s) of the parabola (the $x$-intercept(s)) as well as having an explicit formula for computing the root(s) of the function known as the \textit{quadratic formula}\index{function!quadratic!formula}. The quadratic formula solves for the $x$-coordinate(s) of the roots for a given quadratic function (where $y=0$)
+Quadratic functions have some useful properties such as the root(s) of the parabola (the $x$-intercept(s)) as well as having an explicit formula for computing the root(s) of the function known as the \textbf{quadratic formula}\index{function!quadratic!formula}. The quadratic formula solves for the $x$-coordinate(s) of the roots for a given quadratic function (where $y=0$)
 
 \begin{equation}
     x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \end{equation}
 
-\noindent where $a$, $b$, and $c$ are the coefficients in the standard form of a quadratic function. This forumla gives real roots when the \textit{discriminant}\index{function!quadratic!discriminant} $b^2 - 4ac > 0$, a single real root (with a multiplicity of two) when $b^2 - 4ac = 0$, complex roots when $b^2 - 4ac < 0$, and purely imaginary roots when $b = 0$ and $4ac > 0$.
+\noindent where $a$, $b$, and $c$ are the coefficients in the standard form of a quadratic function. This forumla gives real roots when the \textbf{discriminant}\index{function!quadratic!discriminant} $b^2 - 4ac > 0$, a single real root (with a multiplicity of two) when $b^2 - 4ac = 0$, complex roots when $b^2 - 4ac < 0$, and purely imaginary roots when $b = 0$ and $4ac > 0$.
 
 \begin{example}
-    An example of a quadratic function is \textit{vertical projectile motion} under gravity:
+    An example of a quadratic function is \textbf{vertical projectile motion} under gravity:
 
     \noindent Given an object with initial height $h_0$ and initial vertical velocity $v_0$, its height at time $t$ is modeled by
 
@@ -314,10 +320,10 @@ Generalizing upon the linear and quadratic functions further, polynomial functio
         f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0
     \end{equation}
 
-    \noindent are \textit{polynomial functions}\index{function!polynomial}. Where $n$ is the \textit{degree}\index{function!polynomial!degree} of the polynomial (when $a_n \neq 0$) and $a_i$ for $i \in \{0,1,\dots,n-1,n\}$ are the coefficients. The domain and range of polynomials, like linear and quadratic functions, span the entirety of the real numbers.
+    \noindent are \textbf{polynomial functions}\index{function!polynomial}. Where $n$ is the \textbf{degree}\index{function!polynomial!degree} of the polynomial (when $a_n \neq 0$) and $a_i$ for $i \in \{0,1,\dots,n-1,n\}$ are the coefficients. The domain and range of polynomials, like linear and quadratic functions, span the entirety of the real numbers.
 \end{definition}
 
-Similar to quadratic functions, polynomials have up to $n$ roots but do not have an explicit formula to compute those roots for polynomials with degree $n > 3$. Linear functions and quadratic functions can be considered special cases of polynomial functions with degree $n=1$ and $n=2$ respectively. Common higher-order polynomials are \textit{cubic functions}\index{function!polynomial!cubic} $n=3$, \textit{quartic functions}\index{function!polynomial!quartic} $n=4$, and \textit{quintic functions}\index{function!polynomial!quintic} $n=5$. A useful property of polynomials is that there are at most $n$ roots for a polynomial of degree $n$, note that when a polynomial has less (real and complex) roots than its degree, one of its roots may have a multiplicity greater than one meaning that it is repeated. For example, the polynomial (in root form) $f(x) = (x+1)(x+1)(x+1) = (x+1)^3 = x^3 + 3x^2 + 3x + 1$ has all three roots at $x=-1$ which means that the root $(x=-1,y=0)$ has multiplicity of 3.
+Similar to quadratic functions, polynomials have up to $n$ roots but do not have an explicit formula to compute those roots for polynomials with degree $n > 3$. Linear functions and quadratic functions can be considered special cases of polynomial functions with degree $n=1$ and $n=2$ respectively. Common higher-order polynomials are \textbf{cubic functions}\index{function!polynomial!cubic} $n=3$, \textbf{quartic functions}\index{function!polynomial!quartic} $n=4$, and \textbf{quintic functions}\index{function!polynomial!quintic} $n=5$. A useful property of polynomials is that there are at most $n$ roots for a polynomial of degree $n$, note that when a polynomial has less (real and complex) roots than its degree, one of its roots may have a multiplicity greater than one meaning that it is repeated. For example, the polynomial (in root form) $f(x) = (x+1)(x+1)(x+1) = (x+1)^3 = x^3 + 3x^2 + 3x + 1$ has all three roots at $x=-1$ which means that the root $(x=-1,y=0)$ has multiplicity of 3.
 
 \begin{example} To show the differences between polynomials with varying order, Figure \ref{fig:polynomials} graphs polynomials of the form $x^n$ up to the $6$th degree.
 
@@ -357,10 +363,10 @@ Rational functions branch from polynomials in a similar way to how rational numb
         f(x) = \frac{p(x)}{q(x)}
     \end{equation}
 
-    \noindent where $p(x)$ and $q(x) \neq 0$ are polynomial functions are known as \textit{rational functions}\index{function!rational}. Their domains are $(-\infty,\infty)$ (not including asymptotes and holes) and their ranges are $(-\infty,\infty)$.
+    \noindent where $p(x)$ and $q(x) \neq 0$ are polynomial functions are known as \textbf{rational functions}\index{function!rational}. Their domains are $(-\infty,\infty)$ (not including asymptotes and holes) and their ranges are $(-\infty,\infty)$.
 \end{definition}
 
-Like polynomials, rational functions have \textit{zeros}\index{function!rational!zeros} or roots when the numerator is equal to zero, but also zeros when the denominator of the function is equal to zero called \textit{poles}\index{function!rational!poles}. These describe discontinuous points as the the denominators reach zero resulting in holes (when a zero and a pole cancel) and an \textit{asymptote}\index{function!rational!asymptote} when the pole is not cancelled.
+Like polynomials, rational functions have \textbf{zeros}\index{function!rational!zeros} or roots when the numerator is equal to zero, but also zeros when the denominator of the function is equal to zero called \textbf{poles}\index{function!rational!poles}. These describe discontinuous points as the the denominators reach zero resulting in holes (when a zero and a pole cancel) and an \textbf{asymptote}\index{function!rational!asymptote} when the pole is not cancelled.
 
 \begin{example} An example of a rational function that has both holes and asymptotes is
     $$
@@ -403,11 +409,17 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         \end{example}
 
         \subsection{Trigonometric Functions}
-        While the progression from linear to polynomial functions follows an algebraic development (any functions formed using algebraic operations: $\{+,-,\times,\div,x^a,\sqrt[a]{(\cdot)},\dots\}$), trigonometric functions like $f(x) = \sin(x)$ and $f(x) = \cos(x)$ come from the fundamental geometric concepts of triangles and \textit{angle}\index{angle} and are considered \textit{transcendental}\index{function!transcendental}. Transcendental functions are any functions not that are not algebraic, including trigonometric, exponential, and logarithmic functions (discussed in Section \ref{sect:explog}).
+        While the progression from linear to polynomial functions follows an algebraic development (any functions formed using algebraic operations: $\{+,-,\times,\div,x^a,\sqrt[a]{(\cdot)},\dots\}$), trigonometric functions like $f(x) = \sin(x)$ and $f(x) = \cos(x)$ come from the fundamental geometric concepts of triangles and \textbf{angle}\index{angle} and are considered \textbf{transcendental}\index{function!transcendental}. Transcendental functions are any functions that are not algebraic, including trigonometric, exponential, and logarithmic functions (discussed in Section \ref{sect:explog}).
 
-        Angles, measured in \textit{radians}\index{angle!radian} or \textit{degrees}\index{angle!degree} where a full circle is measured have an angle of $2\pi$ radians or $360^circ$ ($360$ degrees). The measure of angles and inputs/outputs for trigonometric functions will always be assumed to be in radians unless specified. One radian is equal to the radius of the unit circle and wraps around the circumference of that circle $2\pi$ times and is defined using $\theta$ as the angle measure $\theta = \frac{s}{r}$ where $s$ is the arclength (see Figure \ref{anglemeasure}).
+        \medskip
 
-        The definition of the \textit{sine}\index{function!trigonometric!sine} and \textit{cosine}\index{function!trigonometric!cosine} functions come from right triangle trigonometry, where $\theta$ is an acute angle (not the right angle). In the context of the unit circle, draw a radius from the origin forming an angle $\theta$ with the positive $x$-axis. From the point where the radius intersects the circle, drop a perpendicular to the $x$-axis to form a right triangle. The horizontal leg, labeled $x$, is the adjacent side to $\theta$, and the vertical leg, labeled $y$, is the opposite side. The hypotenuse is the radius $r$ of the circle. By definition, $\sin(\theta) = \frac{y}{r}$ and $\cos(\theta) = \frac{x}{r}$. On the unit circle, where $r = 1$, this simplifies to $\sin(\theta) = y$ and $\cos(\theta) = x$. Figure~\ref{anglemeasure} shows this triangle embedded in the circle.
+        Angles, measured in \textbf{radians}\index{angle!radian} or \textbf{degrees}\index{angle!degree} where a full circle is measured have an angle of $2\pi$ radians or $360^\circ$ ($360$ degrees). The measure of angles and inputs/outputs for trigonometric functions will always be assumed to be in radians unless specified. One radian is equal to the radius of the unit circle and wraps around the circumference of that circle $2\pi$ times and is defined using $\theta$ as the angle measure $\theta = \frac{s}{r}$ where $s$ is the arclength (see Figure \ref{anglemeasure}).
+
+        \medskip
+
+        The definition of the \textbf{sine}\index{function!trigonometric!sine} and \textbf{cosine}\index{function!trigonometric!cosine} functions come from right triangle trigonometry, where $\theta$ is an acute angle (not the right angle). In the context of the unit circle, draw a radius from the origin forming an angle $\theta$ with the positive $x$-axis. From the point where the radius intersects the circle, drop a perpendicular to the $x$-axis to form a right triangle. The horizontal leg, labeled $x$, is the adjacent side to $\theta$, and the vertical leg, labeled $y$, is the opposite side. The hypotenuse is the radius $r$ of the circle. By definition, $\sin(\theta) = \frac{y}{r}$ and $\cos(\theta) = \frac{x}{r}$. On the unit circle, where $r = 1$, this simplifies to $\sin(\theta) = y$ and $\cos(\theta) = x$. Figure~\ref{anglemeasure} shows this triangle embedded in the circle.
+
+        \medskip
 
         \begin{figure}
             \centering
@@ -459,6 +471,8 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
 
         The main two trigonometric functions $f(x) = \sin(x)$ and $f(x) = \cos(x)$, unlike the previously mentioned functions, have restricted ranges as their values vary within the interval $[-1,1]$. Their graphs can be seen in Figure \ref{fig:triggraph}.
 
+        \medskip
+
         \begin{figure}
             \centering
             \begin{tikzpicture}
@@ -486,7 +500,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
             \tan(x) = \frac{\sin(x)}{\cos(x)}
         \end{equation}
 
-        The domain of the trigonometric \textit{tangent}\index{function!trigonometric!tangent} function is determined by the $\cos(x)$ in the denominator, where $\cos(x) = 0$ there is a vertical asymptote though it is still periodic. These asymptotes occur at $x = \frac{\pi}{2} + k\pi$ where $n \in \Z$. The graph of $\tan(x)$ can be seen in Figure \ref{fig:tangentgraph}.
+        The domain of the trigonometric \textbf{tangent}\index{function!trigonometric!tangent} function is determined by the $\cos(x)$ in the denominator, where $\cos(x) = 0$ there is a vertical asymptote though it is still periodic. These asymptotes occur at $x = \frac{\pi}{2} + k\pi$ where $n \in \Z$. The graph of $\tan(x)$ can be seen in Figure \ref{fig:tangentgraph}.
 
         \begin{figure}
             \centering
@@ -523,7 +537,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
 
         \subsection{Exponential and Logarithmic Functions}
         \label{sect:explog}
-        The last family of functions we are going to present in this section are the \textit{exponential} and \textit{logarithmic}functions.
+        The last family of functions we are going to present in this section are the \textbf{exponential} and \textbf{logarithmic}functions.
 
         \begin{definition}
             Functions of the form
@@ -531,7 +545,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
                 f(x) = a^x
             \end{equation}
 
-            where $a$ is the base, are called \textit{exponential}\index{function!exponential} functions. Their domain is $(-\infty,\infty)$ and range is $(0,\infty)$.
+            where $a$ is the base, are called \textbf{exponential}\index{function!exponential} functions. Their domain is $(-\infty,\infty)$ and range is $(0,\infty)$.
         \end{definition}
 
         Logarithmic are inverses (discussed in Section \ref{sect:periodicfunctions}) of exponents such that
@@ -549,10 +563,12 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
                 f(x) = \log_a(x)
             \end{equation}
 
-            where $a$ is the base, are called \textit{logarithmic}\index{function!logarithmic} functions. The domain for the logarithm is $(0,\infty)$ and the range is $(-\infty,\infty)$.
+            where $a$ is the base, are called \textbf{logarithmic}\index{function!logarithmic} functions. The domain for the logarithm is $(0,\infty)$ and the range is $(-\infty,\infty)$.
         \end{definition}
 
         The graphs of exponents and logarithms with various bases are shown in Figure \ref{fig:exploggraphs}.
+
+        \medskip
 
         \begin{figure}
             \centering
@@ -640,7 +656,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         It is important to be able to further distinguish functions and classify their behaviors into distinct characteristics in order to properly analyze them. Characteristics such as symmetry (evenness and oddness of a function) and periodicity (repeating functions) are defined in such ways that may give insight into solving certain problems or giving us the opportunity to exploit their definitions.
 
         \subsection{Piecewise Functions and Absolute Values}
-        \textit{Piecewise functions}\index{function!piecewise} are formed with multiple functions on separate intervals for the domain. For example, in a rational function with holes, $g(x) = \frac{(x+1)(x-1)}{(x+1)}$ the hole at $x = -1$ can be "plugged" with a piecewise function
+        \textbf{Piecewise functions}\index{function!piecewise} are formed with multiple functions on separate intervals for the domain. For example, in a rational function with holes, $g(x) = \frac{(x+1)(x-1)}{(x+1)}$ the hole at $x = -1$ can be "plugged" with a piecewise function
 
         $$
         f(x) =
@@ -650,7 +666,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         \end{cases}
         $$
 
-        An important type of piecewise function is the \textit{absolute value}\index{function!piecewise!absolute value} defined as
+        An important type of piecewise function is the \textbf{absolute value}\index{function!piecewise!absolute value} defined as
 
         \begin{equation}
             |x| =
@@ -660,16 +676,16 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
             \end{cases}
         \end{equation}
 
-        \noindent This returns a positive value for all inputs so the range is $[0,\infty)$. The absolute value is important as it allows us to define a notion of \textit{distance}\index{distance} between numbers. For example take $a = 10$ and $b = 3$, the distance between $a$ and $b$ is
+        \noindent This returns a positive value for all inputs so the range is $[0,\infty)$. The absolute value is important as it allows us to define a notion of \textbf{distance}\index{distance} between numbers. For example take $a = 10$ and $b = 3$, the distance between $a$ and $b$ is
 
         \begin{equation}
             d = |b - a| = |3 - 10| = |-7| = 7
         \end{equation}
 
-        \noindent so $a$ is $7$ units away from $b$. The absolute value has the property $|ab| = |a||b|$ and the \textit{triangle inequality}\index{triangle inequality} with the following definition
+        \noindent so $a$ is $7$ units away from $b$. The absolute value has the property $|ab| = |a||b|$ and the \textbf{triangle inequality}\index{triangle inequality} with the following definition
 
         \begin{definition}
-            The \textit{Triangle Inequality}
+            The \textbf{Triangle Inequality}
 
             \begin{aequation}
                 |a+b| &\leq |a| + |b| \\
@@ -682,7 +698,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         \subsection{Even and Odd Functions}
         Function symmetry
         \begin{definition}
-            A function $f(x)$ is said to be an \textit{even function}\index{function!even} of the independent variable $x$ if and only if
+            A function $f(x)$ is said to be an \textbf{even function}\index{function!even} of the independent variable $x$ if and only if
             $$
             f(-x) = f(x)
             $$
@@ -690,7 +706,7 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
         \end{definition}
 
         \begin{definition}
-            A function $f(x)$ is said to be an \textit{odd function}\index{function!odd} of the independent variable $x$ if and only if
+            A function $f(x)$ is said to be an \textbf{odd function}\index{function!odd} of the independent variable $x$ if and only if
             $$
             f(-x) = -f(x)
             $$
@@ -699,25 +715,25 @@ Like polynomials, rational functions have \textit{zeros}\index{function!rational
 
         \subsection{Increasing and Decreasing Functions}
         \begin{definition}
-            A function $f$ is \textit{increasing}\index{function!increasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
+            A function $f$ is \textbf{increasing}\index{function!increasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
             $$
             f(x_1) \leq f(x_2).
             $$
-            If the inequality is strict ($f(x_1) < f(x_2)$), we say $f$ is \textit{strictly increasing}\index{function!strictly increasing}.
+            If the inequality is strict ($f(x_1) < f(x_2)$), we say $f$ is \textbf{strictly increasing}\index{function!strictly increasing}.
         \end{definition}
 
         \begin{definition}
-            A function $f$ is \textit{decreasing}\index{function!decreasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
+            A function $f$ is \textbf{decreasing}\index{function!decreasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
             $$
             f(x_1) \geq f(x_2).
             $$
-            If the inequality is strict ($f(x_1) > f(x_2)$), we say $f$ is \textit{strictly decreasing}\index{function!strictly decreasing}.
+            If the inequality is strict ($f(x_1) > f(x_2)$), we say $f$ is \textbf{strictly decreasing}\index{function!strictly decreasing}.
         \end{definition}
 
         \subsection{Periodic Functions}
         \label{sect:periodicfunctions}
         \begin{definition}
-            A function is said to be a \textit{period function}\index{function!periodic} if and only if for some value $a$,
+            A function is said to be a \textbf{period function}\index{function!periodic} if and only if for some value $a$,
             $$
             f(x) = f(x+a)
             $$
