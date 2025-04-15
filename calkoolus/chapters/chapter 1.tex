@@ -3,18 +3,48 @@
 \section{Sets}
 Before defining what a function is or what it does, it is important to briefly discuss what goes into function and what comes out. Simply, \textbf{sets}\index{set} are a collection of items and each one of those items are usually referred to as \textbf{elements}\index{set!element}. Without getting into the weeds of set theory, sets can contain pretty much anything from numbers, functions, and other sets \cite{bookofproof}.
 
-Some common sets that you may be familiar with are the \textbf{natural numbers} $\N = \{1,2,3,4,5,\dots\}$, the \textbf{integers} $\Z = \{\dots,-2,-1,0,1,2,\dots\}$, and the \textbf{real numbers} $\R$, which is usually represented via a number line. Sets can also be intervals on the real line (i.e. [a,b) is an interval on $\R$ containing $a$ but not $b$) or even the possible results of flipping a coin $C = \{H,T\}$.
+\begin{example} Common sets of numbers
 
-\medskip
+    Some common sets that you may be familiar with are the \textbf{natural numbers} $\N = \{1,2,3,4,5,\dots\}$, the \textbf{integers} $\Z = \{\dots,-2,-1,0,1,2,\dots\}$, and the \textbf{real numbers} $\R$, which is usually represented via a number line. Sets can also be intervals on the real line (i.e. [a,b) is an interval on $\R$ containing $a$ but not $b$) or even the possible results of flipping a coin $C = \{H,T\}$.
+\end{example}
 
 We will now define the basic notation when dealing with sets and the operations that can be performed on sets. We say that $x$ is an element of a set $A$ with the notation $x \in A$ and when $x$ is not in $A$, we say $x \not\in A$. For example, given the set $A = \{1,2,3,4\}$, we can say that $1 \in A$ is true as well as $5 \not\in A$.
 
-The notion of combining sets comes with \textbf{unions}\index{set!union} and \textbf{intersections}\index{set!intersection}. Given $A$ and $B$ are sets, the union of $A$ and $B$ is denoted as $A \cup B$ and is equal to the set the contains elements in either $A$ or $B$. Similarly, the intersection between $A$ and $B$ is denoted as $A \cap B$ and is the set that contains elements that are in both $A$ and $B$. For example, given the sets $A = \{1,2,3,4\}$ and $B = \{3,4,5,6\}$, the union and intersection between $A$ and $B$ is
+The notion of combining sets comes with \textbf{unions}\index{set!union} and \textbf{intersections}\index{set!intersection}. Given $A$ and $B$ are sets, the union of $A$ and $B$ is denoted as $A \cup B$ and is equal to the set the contains elements in either $A$ or $B$. Similarly, the intersection between $A$ and $B$ is denoted as $A \cap B$ and is the set that contains elements that are in both $A$ and $B$.
 
-\begin{aequation}
-    A \cup B &= \{1,2,3,4,5,6\} \\
-    A \cap B &= \{3,4\}
-\end{aequation}
+\begin{example} Union and Intersection of two finite sets.
+
+    Given the sets $A = \{1,2,3,4\}$ and $B = \{3,4,5,6\}$, the union and intersection between $A$ and $B$ is
+    $$
+    \begin{aligned}
+        A \cup B &= \{1,2,3,4,5,6\} \\
+        A \cap B &= \{3,4\}
+    \end{aligned}
+    $$
+\end{example}
+
+\begin{example} Constructing the integers from the natural numbers.
+
+    Given $A = \N$, $B = \{-n : n \in N\}$, and $C = \{0\}$, then
+    $$
+    (A \cup B) \cup C = \Z
+    $$
+\end{example}
+
+Another elementary set operation is the \textbf{set difference}\index{set!difference}. Suppose $A$ and $B$ are sets, then the set difference $A - B$ (or $A \setminus B$) is the set $A$ with the elements that both $A$ and $B$ share removed, using set notation, $A - B = \{a \in A : a \not\in B\}$. Note that $A - B \neq B - A$. Similarly, the \textbf{symmetric difference}\index{set!symmetric difference} of two sets $A$ and $B$, denoted $A\Delta B$ is the set of elements in \textit{either} $A$ or $B$ but \textit{both}. In set notation, $A\Delta B = A \cup B - A \cap B = \{x \in A \cup B : x \not\in A \cap B\} = (A - B) \cup (B - A)$.
+
+\begin{example} Set difference and symmetric difference.
+
+    Suppose $A = \{1,2,3,4,5,6,7\}$ and $B = \{3,4,5,6,8\}$, then
+
+    $$
+    \begin{aligned}
+        A - B &= \{1,2,7\} \\
+        B - A &= \{8\} \\
+        A \Delta B &= B \Delta A = \{1,2,7,8\}
+    \end{aligned}
+    $$
+\end{example}
 
 Subsets are often used to relate different sets and their elements. A set $A$ is said to be a subset of another set $B$ if all of the elements of $A$ are also within $B$ and is denoted as $A \subseteq B$ and a set $A$ is equal to a set $B$ if and only if $A \subseteq B$ and $B \subseteq A$. An important subset is the empty set represented by the symbols $\varnothing$, $\emptyset$, or simply $\{\}$. It is important to note that the empty set is also a subset of all sets.
 
@@ -52,7 +82,7 @@ As mentioned previously, intervals on the real number line can be represented as
         \end{itemize}
 \end{itemize}
 
-\noindent Here, the open brackets $($ and $)$ indicate that the respective endpoint is not included, while the closed brackets $[$ and $]$ indicate that the respective endpoint is included in the interval.
+\noindent Here, the open brackets $($ and $)$ indicate that the respective endpoint is not included in the interval, while the closed brackets $[$ and $]$ indicate that the respective endpoint is included in the interval.
 
 \medskip
 
@@ -79,7 +109,7 @@ The \textbf{Cartesian product}\index{set!Cartesian product} (also known as the \
 
 For further and more formal discussion on sets and naive set theory as well as formal logic and proof writing, refer to \cite{naivesettheory} or \cite{bookofproof}.
 
-\subsection{Exercises}
+\subsection*{Exercises}
 
 \section{What is a function?}
 \textbf{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the unique elements of $X$, called the \textbf{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textbf{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$" \cite{understandinganalysis}), where $y \in R \subseteq Y$ is known as the \textbf{dependent variable}\index{function!dependent variable} with $R$ as the range of the function and $x \in X$ is known as the \textbf{independent variable}\index{function!independent variable} or the \textbf{argument}\index{function!argument} of the function. The \textbf{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of the codomain $Y$ but is not always equal. Formally, the definition is as follows
@@ -128,8 +158,8 @@ Further emphasis must be made on the elements $y = f(x)$. The function $f(x)$ ma
     \label{functionmapping}
 \end{figure}
 
-\begin{example}
-    Some real-world examples of functions are
+\begin{example} Real world examples of functions.
+
     \begin{itemize}
         \item The area of a circle: \dotfill $A(r) = \pi r^2$
         \item The height of a falling ball: \dotfill $h(t) = h_0 + v_0 t - (1/2)gt^2$
@@ -137,14 +167,17 @@ Further emphasis must be made on the elements $y = f(x)$. The function $f(x)$ ma
         \item Temperature conversion: \dotfill $C(F) = \frac{5}{9}(F - 32)$
         \item %TODO: add more examples here
     \end{itemize}
-    It can be useful to think of functions as machines that take in an input and produces an output. The examples above show such cases using mathematical formulas that give a set of instructions on how the input is transformed from the element in the domain to the element in the range.
+    \label{ex:realworldfunctions}
 \end{example}
+
+Intuitively, it can be useful to think of functions as machines that take in an input and produces an output. The examples in Example \ref{ex:realworldfunctions} show such cases using mathematical formulas that give a set of instructions on how the input is transformed from the element in the domain to the element in the range.
 
 \subsection{Graphs of Functions}
 
 Another way to represent functions is with its \textbf{graph}\index{function!graph} which is a set of points consisting of the input and its corresponding output and is represented with the set of ordered pairs $\{(x,y) : y = f(x), x\in\R\}$ for functions that accept real numbers.
 
-\begin{example}
+\begin{example} Graph of a linear function.
+
     A familiar example is the linear function $f(x) = mx + b$ where $m$ is the slope of the line and $b$ is the vertical offset. Suppose $m = 1$ and $b = 0$, we get the following graph for the function $f(x) = x$ in Figure \ref{f(x)=x graph}
     \begin{figure}[!ht]
         \centering
@@ -159,7 +192,8 @@ Another way to represent functions is with its \textbf{graph}\index{function!gra
     \end{figure}
 \end{example}
 
-\begin{example}
+\begin{example} Graph of a quadratic function.
+
     Another example is the quadratic function of the form $f(x) = ax^2 + bx + c$, where $a,b,c \in \R$ are the coefficients of the function and determine its shape. Suppose that $a = 1, b = 0, c = -1$ resulting in the function $f(x) = x^2 - 1$. Using knowledge of the roots a quadratic function, it can be deduced that this will result in a parabola with $x$-intersections at $x = -1$ and $x = 1$ which can be confirmed in the graph in Figure \ref{f(x)=x^2-1graph}
 
     \begin{figure}[!ht]
@@ -201,7 +235,9 @@ The last representation of a function that will be discussed are functions that 
 
 The function shown in Table \ref{tab:tablefunctionex} is constructed from a mathematical formula ($y = 2x$), this is not necessary, as long as there is only one output for any given input, then, the table is considered a function.
 
-\begin{example} For example, consider the following table that shows the function that maps $X = \{1,3,5,8,4\}$ to $Y = \{3,5,2,1,1\}$ in Table \ref{tab:tablefunctionex2}.
+\begin{example} A table function.
+    
+    For example, consider the following table that shows the function that maps $X = \{1,3,5,8,4\}$ to $Y = \{3,5,2,1,1\}$ in Table \ref{tab:tablefunctionex2}.
     \begin{table}[!ht]
         \centering
         \[
@@ -221,7 +257,7 @@ The function shown in Table \ref{tab:tablefunctionex} is constructed from a math
 
 This conceptual foundation of what a  function is prepares us for the introduction and review of commonly used functions and function families (functions with similar forms and properties).
 
-\subsection{Exercises}
+\subsection*{Exercises}
 
 \section{Common Functions}
 Functions, namely those defined via mathematical formulas, can be classified into function families whose members share common features, forms, and properties. Some such families often differ only in coefficients and others may change the base in which they operate. The following types of functions are used frequently in the study of calculus.
@@ -285,7 +321,7 @@ Quadratic functions have some useful properties such as the root(s) of the parab
     x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \end{equation}
 
-\noindent where $a$, $b$, and $c$ are the coefficients in the standard form of a quadratic function. This forumla gives real roots when the \textbf{discriminant}\index{function!quadratic!discriminant} $b^2 - 4ac > 0$, a single real root (with a multiplicity of two) when $b^2 - 4ac = 0$, complex roots when $b^2 - 4ac < 0$, and purely imaginary roots when $b = 0$ and $4ac > 0$.
+\noindent where $a$, $b$, and $c$ are the coefficients in the standard form of a quadratic function. This formula gives real roots when the \textbf{discriminant}\index{function!quadratic!discriminant} $b^2 - 4ac > 0$, a single real root (with a multiplicity of two) when $b^2 - 4ac = 0$, complex roots when $b^2 - 4ac < 0$, and purely imaginary roots when $b = 0$ and $4ac > 0$.
 
 \begin{example}
     An example of a quadratic function is \textbf{vertical projectile motion} under gravity:
@@ -743,6 +779,6 @@ Like polynomials, rational functions have \textbf{zeros}\index{function!rational
         \section{Function Transformations and Operations}
         \subsection{Function Arithmetic}
         \subsection{Function Translation}
-        \subsection{Fuction Composition}
+        \subsection{Function Composition}
         \subsection{Function Inverses}
         \label{sect:function inverses}
