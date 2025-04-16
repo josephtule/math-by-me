@@ -1,6 +1,8 @@
 \chapter{Functions}
+\label{chap:functions}
 
 \section{Sets}
+\label{sect:sets}
 Before defining what a function is or what it does, it is important to briefly discuss what goes into function and what comes out. Simply, \textbf{sets}\index{set} are a collection of items and each one of those items are usually referred to as \textbf{elements}\index{set!element}. Without getting into the weeds of set theory, sets can contain pretty much anything from numbers, functions, and other sets \cite{bookofproof}.
 
 \begin{example} Common sets of numbers
@@ -112,6 +114,7 @@ For further and more formal discussion on sets and naive set theory as well as f
 \subsection*{Exercises}
 
 \section{What is a function?}
+\label{sect:what is a function}
 \textbf{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the unique elements of $X$, called the \textbf{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textbf{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$" \cite{understandinganalysis}), where $y \in R \subseteq Y$ is known as the \textbf{dependent variable}\index{function!dependent variable} with $R$ as the range of the function and $x \in X$ is known as the \textbf{independent variable}\index{function!independent variable} or the \textbf{argument}\index{function!argument} of the function. The \textbf{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of the codomain $Y$ but is not always equal. Formally, the definition is as follows
 
 \begin{definition}
@@ -236,7 +239,7 @@ The last representation of a function that will be discussed are functions that 
 The function shown in Table \ref{tab:tablefunctionex} is constructed from a mathematical formula ($y = 2x$), this is not necessary, as long as there is only one output for any given input, then, the table is considered a function.
 
 \begin{example} A table function.
-    
+
     For example, consider the following table that shows the function that maps $X = \{1,3,5,8,4\}$ to $Y = \{3,5,2,1,1\}$ in Table \ref{tab:tablefunctionex2}.
     \begin{table}[!ht]
         \centering
@@ -260,6 +263,7 @@ This conceptual foundation of what a  function is prepares us for the introducti
 \subsection*{Exercises}
 
 \section{Common Functions}
+\label{sect:common functions}
 Functions, namely those defined via mathematical formulas, can be classified into function families whose members share common features, forms, and properties. Some such families often differ only in coefficients and others may change the base in which they operate. The following types of functions are used frequently in the study of calculus.
 
 \subsection{Linear Functions}
@@ -426,17 +430,10 @@ Like polynomials, rational functions have \textbf{zeros}\index{function!rational
                 \draw[dashed, red] (axis cs:2,-7) -- (axis cs:2,7);
                 \draw[dashed, blue] (axis cs:-7,1) -- (axis cs:7,1);
 
-                \addplot[color=black, domain=-7:1.99, samples=50, unbounded coords=jump]
-                {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2)};
-                    \addplot[color=black, domain=2.01:7, samples=50, unbounded coords=jump]
-                    {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2)};
+                \addplot[color=black, domain=-7:1.99, samples=50, unbounded coords=jump] {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2)};
+                    \addplot[color=black, domain=2.01:7, samples=50, unbounded coords=jump] {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2)};
 
-                        % Holes at x=1 and x=-1
-                        \addplot[only marks, mark=*, mark options={fill=white, draw=black}]
-                        coordinates {
-                            (1, -3)    % Hole at x=1 (lim_{x→1} f(x) = -3)
-                            (-1, -1/3) % Hole at x=-1 (lim_{x→-1} f(x) = -1/3)
-                        };
+                        \addplot[only marks, mark=*, mark options={fill=white, draw=black}] coordinates {(1, -3)    (-1, -1/3) };
                     \end{axis}
                 \end{tikzpicture}
                 \caption{Rational function $f(x) = \frac{(x-1)(x+1)(x+2)}{(x-1)(x+1)(x-2)}$ with holes at $(1,-3)$ and $(-1,-\frac{1}{3})$, vertical asymptote at $x=2$, and horizontal asymptote at $y=1$}
@@ -569,7 +566,7 @@ Like polynomials, rational functions have \textbf{zeros}\index{function!rational
             \label{fig:tangentgraph}
         \end{figure}
 
-        As noted with the sine, cosine, and tangent functions, these are periodic, meaning they identically repeat after a set period, this is further discussed in Section \ref{sect:periodicfunctions}.
+        As noted with the sine, cosine, and tangent functions, these are periodic, meaning they identically repeat after a set period, this is further discussed in Section \ref{sect:periodic functions}.
 
         \subsection{Exponential and Logarithmic Functions}
         \label{sect:explog}
@@ -584,7 +581,7 @@ Like polynomials, rational functions have \textbf{zeros}\index{function!rational
             where $a$ is the base, are called \textbf{exponential}\index{function!exponential} functions. Their domain is $(-\infty,\infty)$ and range is $(0,\infty)$.
         \end{definition}
 
-        Logarithmic are inverses (discussed in Section \ref{sect:periodicfunctions}) of exponents such that
+        Logarithmic are inverses (discussed in Section \ref{sect:periodic functions}) of exponents such that
 
         \begin{equation}
             \log_a(a^x) = x
@@ -688,10 +685,11 @@ Like polynomials, rational functions have \textbf{zeros}\index{function!rational
         \end{example}
         % \subsection{Systems of Equations}
 
-        \section{Types of Functions}
+        \section{Types of Functions}\label{sect:types of functions}
         It is important to be able to further distinguish functions and classify their behaviors into distinct characteristics in order to properly analyze them. Characteristics such as symmetry (evenness and oddness of a function) and periodicity (repeating functions) are defined in such ways that may give insight into solving certain problems or giving us the opportunity to exploit their definitions.
 
         \subsection{Piecewise Functions and Absolute Values}
+        \label{sect:piecewise functions and absolute values}
         \textbf{Piecewise functions}\index{function!piecewise} are formed with multiple functions on separate intervals for the domain. For example, in a rational function with holes, $g(x) = \frac{(x+1)(x-1)}{(x+1)}$ the hole at $x = -1$ can be "plugged" with a piecewise function
 
         $$
@@ -731,7 +729,7 @@ Like polynomials, rational functions have \textbf{zeros}\index{function!rational
 
         \noindent This states that the distance from point $a$ to point $b$ is less or equal to that of the distance from $a$ to a point $c$ and then from the point $c$ to the point $b$ (this may make more sense in higher dimensions discussed later).
 
-        \subsection{Even and Odd Functions}
+        \subsection{Even and Odd Functions}\label{sect:even and odd functions}
         Function symmetry
         \begin{definition}
             A function $f(x)$ is said to be an \textbf{even function}\index{function!even} of the independent variable $x$ if and only if
@@ -767,7 +765,7 @@ Like polynomials, rational functions have \textbf{zeros}\index{function!rational
         \end{definition}
 
         \subsection{Periodic Functions}
-        \label{sect:periodicfunctions}
+        \label{sect:periodic functions}
         \begin{definition}
             A function is said to be a \textbf{period function}\index{function!periodic} if and only if for some value $a$,
             $$
@@ -777,8 +775,12 @@ Like polynomials, rational functions have \textbf{zeros}\index{function!rational
         \end{definition}
 
         \section{Function Transformations and Operations}
+        \label{sect:function transformations and operations}
         \subsection{Function Arithmetic}
+        \label{sect:function arithmetic}
         \subsection{Function Translation}
+        \label{sect:function translation}
         \subsection{Function Composition}
+        \label{sect:function composition}
         \subsection{Function Inverses}
         \label{sect:function inverses}
