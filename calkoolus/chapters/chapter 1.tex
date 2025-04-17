@@ -1,8 +1,7 @@
-\chapter{Functions}
-\label{chap:functions}
+\chapter{Functions}\label{chap:functions}
 
-\section{Sets}
-\label{sect:sets}
+\section{Sets}\label{sect:sets}
+
 Before defining what a function is or what it does, it is important to briefly discuss what goes into function and what comes out. Simply, \textbf{sets}\index{set} are a collection of items and each one of those items are usually referred to as \textbf{elements}\index{set!element}. Without getting into the weeds of set theory, sets can contain pretty much anything from numbers, functions, and other sets \cite{bookofproof}.
 
 \begin{example} Common sets of numbers
@@ -113,8 +112,8 @@ For further and more formal discussion on sets and naive set theory as well as f
 
 \subsection*{Exercises}
 
-\section{What is a function?}
-\label{sect:what is a function}
+\section{What is a function?}\label{sect:what is a function}
+
 \textbf{Functions}\index{function} are objects in math that describe a relationship or mapping between two sets. Given two sets $X$ and $Y$, a function $f$ maps the unique elements of $X$, called the \textbf{domain}\index{function!domain} of the function, to elements in the set $Y$ called the \textbf{codomain}\index{function!codomain} of the function and the relationship is denoted as $f : X \to Y$ ("$f$ maps from $X$ to $Y$") or $y = f(x)$ ("$y$ equals $f$ of $x$" \cite{understandinganalysis}), where $y \in R \subseteq Y$ is known as the \textbf{dependent variable}\index{function!dependent variable} with $R$ as the range of the function and $x \in X$ is known as the \textbf{independent variable}\index{function!independent variable} or the \textbf{argument}\index{function!argument} of the function. The \textbf{range}\index{function!range} of a function is the set of all possible values that $f(x)$ is able to output with $X$ as its domain, note that the range is a subset of the codomain $Y$ but is not always equal. Formally, the definition is as follows
 
 \begin{definition}
@@ -175,7 +174,7 @@ Further emphasis must be made on the elements $y = f(x)$. The function $f(x)$ ma
 
 Intuitively, it can be useful to think of functions as machines that take in an input and produces an output. The examples in Example \ref{ex:realworldfunctions} show such cases using mathematical formulas that give a set of instructions on how the input is transformed from the element in the domain to the element in the range.
 
-\subsection{Graphs of Functions}
+\subsection{Graphs of Functions}\label{sect:graphs of functions}
 
 Another way to represent functions is with its \textbf{graph}\index{function!graph} which is a set of points consisting of the input and its corresponding output and is represented with the set of ordered pairs $\{(x,y) : y = f(x), x\in\R\}$ for functions that accept real numbers.
 
@@ -217,7 +216,7 @@ Another way to represent functions is with its \textbf{graph}\index{function!gra
     \end{figure}
 \end{example}
 
-\subsection{Table Functions}
+\subsection{Table Functions}\label{sect:table functions}
 
 The last representation of a function that will be discussed are functions that are in the form of tables. Consider two finite sets $X = \{1,2,3,4,5\}$ and $Y = \{2,4,6,8,10\}$ and a function that maps the elements of $X$ to the elements of $Y$. A table can be created that shows the assignment of the elements (Table \ref{tab:tablefunctionex}) via the function $f(x)$.
 
@@ -262,11 +261,12 @@ This conceptual foundation of what a  function is prepares us for the introducti
 
 \subsection*{Exercises}
 
-\section{Common Functions}
-\label{sect:common functions}
+\section{Common Functions}\label{sect:common functions}
+
 Functions, namely those defined via mathematical formulas, can be classified into function families whose members share common features, forms, and properties. Some such families often differ only in coefficients and others may change the base in which they operate. The following types of functions are used frequently in the study of calculus.
 
-\subsection{Linear Functions}
+\subsection{Linear Functions}\label{sect:linear functions}
+
 Beginning with the most elementary form of functions created using mathematical formulas is the \textbf{linear function}\index{function!linear} or the equation for a line.
 
 \begin{definition}
@@ -306,7 +306,8 @@ The graphs of linear functions are straight lines, if the domain of the function
 
 % TODO: add more discussion here
 
-\subsection{Quadratic Functions}
+\subsection{Quadratic Functions}\label{sect:quadratic functions}
+
 Quadratic functions are the next natural progression after linear functions. The simplest form of a quadratic function $f(x) = x^2$ consists of $x$ multiplied by itself. The graph of a quadratic equation is a \textbf{parabola}\index{function!quadratic!parabola} and can be seen in Figure \ref{f(x)=x^2-1graph}.
 
 \begin{definition}
@@ -351,7 +352,8 @@ Quadratic functions have some useful properties such as the root(s) of the parab
     \end{figure}
 \end{example}
 
-\subsection{Polynomial and Rational Functions}
+\subsection{Polynomial and Rational Functions}\label{sect:polynomial and rational function}
+
 Generalizing upon the linear and quadratic functions further, polynomial functions are the next step.
 
 \begin{definition}
@@ -430,357 +432,369 @@ Like polynomials, rational functions have \textbf{zeros}\index{function!rational
                 \draw[dashed, red] (axis cs:2,-7) -- (axis cs:2,7);
                 \draw[dashed, blue] (axis cs:-7,1) -- (axis cs:7,1);
 
-                \addplot[color=black, domain=-7:1.99, samples=50, unbounded coords=jump] {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2)};
-                    \addplot[color=black, domain=2.01:7, samples=50, unbounded coords=jump] {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2)};
+                \addplot[color=black, domain=-7:1.99, samples=50, unbounded coords=jump] {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2))};
+                \addplot[color=black, domain=2.01:7, samples=50, unbounded coords=jump] {(x-1)*(x+1)*(x+2)/((x-1)*(x+1)*(x-2))};
+                \addplot[only marks, mark=*, mark options={fill=white, draw=black}] coordinates {(1, -3) (-1, -1/3) };
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Rational function $f(x) = \frac{(x-1)(x+1)(x+2)}{(x-1)(x+1)(x-2)}$ with holes at $(1,-3)$ and $(-1,-\frac{1}{3})$, vertical asymptote at $x=2$, and horizontal asymptote at $y=1$}
+        \label{fig:rationalholeandasymptote}
+    \end{figure}
+\end{example}
 
-                        \addplot[only marks, mark=*, mark options={fill=white, draw=black}] coordinates {(1, -3)    (-1, -1/3) };
-                    \end{axis}
-                \end{tikzpicture}
-                \caption{Rational function $f(x) = \frac{(x-1)(x+1)(x+2)}{(x-1)(x+1)(x-2)}$ with holes at $(1,-3)$ and $(-1,-\frac{1}{3})$, vertical asymptote at $x=2$, and horizontal asymptote at $y=1$}
-                \label{fig:rationalholeandasymptote}
-            \end{figure}
-        \end{example}
+\subsection{Trigonometric Functions}\label{sect:trigonometric functions}
 
-        \subsection{Trigonometric Functions}
-        While the progression from linear to polynomial functions follows an algebraic development (any functions formed using algebraic operations: $\{+,-,\times,\div,x^a,\sqrt[a]{(\cdot)},\dots\}$), trigonometric functions like $f(x) = \sin(x)$ and $f(x) = \cos(x)$ come from the fundamental geometric concepts of triangles and \textbf{angle}\index{angle} and are considered \textbf{transcendental}\index{function!transcendental}. Transcendental functions are any functions that are not algebraic, including trigonometric, exponential, and logarithmic functions (discussed in Section \ref{sect:explog}).
+While the progression from linear to polynomial functions follows an algebraic development (any functions formed using algebraic operations: $\{+,-,\times,\div,x^a,\sqrt[a]{(\cdot)},\dots\}$), trigonometric functions like $f(x) = \sin(x)$ and $f(x) = \cos(x)$ come from the fundamental geometric concepts of triangles and \textbf{angle}\index{angle} and are considered \textbf{transcendental}\index{function!transcendental}. Transcendental functions are any functions that are not algebraic, including trigonometric, exponential, and logarithmic functions (discussed in Section \ref{sect:exponential and logarithmic functions}).
 
-        \medskip
+\medskip
 
-        Angles, measured in \textbf{radians}\index{angle!radian} or \textbf{degrees}\index{angle!degree} where a full circle is measured have an angle of $2\pi$ radians or $360^\circ$ ($360$ degrees). The measure of angles and inputs/outputs for trigonometric functions will always be assumed to be in radians unless specified. One radian is equal to the radius of the unit circle and wraps around the circumference of that circle $2\pi$ times and is defined using $\theta$ as the angle measure $\theta = \frac{s}{r}$ where $s$ is the arclength (see Figure \ref{anglemeasure}).
+Angles, measured in \textbf{radians}\index{angle!radian} or \textbf{degrees}\index{angle!degree} where a full circle is measured have an angle of $2\pi$ radians or $360^\circ$ ($360$ degrees). The measure of angles and inputs/outputs for trigonometric functions will always be assumed to be in radians unless specified. One radian is equal to the radius of the unit circle and wraps around the circumference of that circle $2\pi$ times and is defined using $\theta$ as the angle measure $\theta = \frac{s}{r}$ where $s$ is the arclength (see Figure \ref{anglemeasure}).
 
-        \medskip
+\medskip
 
-        The definition of the \textbf{sine}\index{function!trigonometric!sine} and \textbf{cosine}\index{function!trigonometric!cosine} functions come from right triangle trigonometry, where $\theta$ is an acute angle (not the right angle). In the context of the unit circle, draw a radius from the origin forming an angle $\theta$ with the positive $x$-axis. From the point where the radius intersects the circle, drop a perpendicular to the $x$-axis to form a right triangle. The horizontal leg, labeled $x$, is the adjacent side to $\theta$, and the vertical leg, labeled $y$, is the opposite side. The hypotenuse is the radius $r$ of the circle. By definition, $\sin(\theta) = \frac{y}{r}$ and $\cos(\theta) = \frac{x}{r}$. On the unit circle, where $r = 1$, this simplifies to $\sin(\theta) = y$ and $\cos(\theta) = x$. Figure~\ref{anglemeasure} shows this triangle embedded in the circle.
+The definition of the \textbf{sine}\index{function!trigonometric!sine} and \textbf{cosine}\index{function!trigonometric!cosine} functions come from right triangle trigonometry, where $\theta$ is an acute angle (not the right angle). In the context of the unit circle, draw a radius from the origin forming an angle $\theta$ with the positive $x$-axis. From the point where the radius intersects the circle, drop a perpendicular to the $x$-axis to form a right triangle. The horizontal leg, labeled $x$, is the adjacent side to $\theta$, and the vertical leg, labeled $y$, is the opposite side. The hypotenuse is the radius $r$ of the circle. By definition, $\sin(\theta) = \frac{y}{r}$ and $\cos(\theta) = \frac{x}{r}$. On the unit circle, where $r = 1$, this simplifies to $\sin(\theta) = y$ and $\cos(\theta) = x$. Figure~\ref{anglemeasure} shows this triangle embedded in the circle.
 
-        \medskip
+\medskip
 
-        \begin{figure}
-            \centering
-            \begin{tikzpicture}
-                \def\myrad{3}
-                \def\myang{60}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \def\myrad{3}
+        \def\myang{60}
 
-                % Compute x-coordinate of foot of perpendicular
-                \pgfmathsetmacro{\xproj}{\myrad * cos(\myang)}
-                \pgfmathsetmacro{\yproj}{\myrad * sin(\myang)}
+        % Compute x-coordinate of foot of perpendicular
+        \pgfmathsetmacro{\xproj}{\myrad * cos(\myang)}
+        \pgfmathsetmacro{\yproj}{\myrad * sin(\myang)}
 
-                \coordinate (O) at (0,0);
-                \coordinate (A) at (\myrad,0);
-                \coordinate (B) at (\myang:\myrad);
-                \coordinate (C) at (\xproj,0);
+        \coordinate (O) at (0,0);
+        \coordinate (A) at (\myrad,0);
+        \coordinate (B) at (\myang:\myrad);
+        \coordinate (C) at (\xproj,0);
 
-                % Circle and center
-                \draw (O) node[circle,inner sep=1.5pt,fill] {} circle[radius=\myrad];
+        % Circle and center
+        \draw (O) node[circle,inner sep=1.5pt,fill] {} circle[radius=\myrad];
 
-                % Radius lines
-                \draw (O) -- node[midway,below] {$r$} (A);
-                \draw (O) -- node[midway,left] {$r$} (B);
+        % Radius lines
+        \draw (O) -- node[midway,below] {$r$} (A);
+        \draw (O) -- node[midway,left] {$r$} (B);
 
-                % Angle arc
-                \pic [draw,->,angle radius=1cm,"$\theta$"] {angle=A--O--B};
+        % Angle arc
+        \pic [draw,->,angle radius=1cm,"$\theta$"] {angle=A--O--B};
 
-                % Arclength arc
-                \draw[|-|]
-                (\myrad+0.3,0)
-                arc[start angle=0,end angle=\myang,radius=\myrad+0.3]
-                node[midway,fill=white] {$s$};
+        % Arclength arc
+        \draw[|-|]
+        (\myrad+0.3,0)
+        arc[start angle=0,end angle=\myang,radius=\myrad+0.3]
+        node[midway,fill=white] {$s$};
 
-                % Triangle
-                \draw[dashed] (B) -- (C);
-                \draw (C) -- (A);
+        % Triangle
+        \draw[dashed] (B) -- (C);
+        \draw (C) -- (A);
 
-                % Triangle side labels
-                \node[below] at ($(A)!1.5!(C)$) {$a$}; % horizontal leg
-                \node[right] at ($(B)!0.5!(C)$) {$o$}; % vertical leg
+        % Triangle side labels
+        \node[below] at ($(A)!1.5!(C)$) {$a$}; % horizontal leg
+        \node[right] at ($(B)!0.5!(C)$) {$o$}; % vertical leg
 
-                % Labels
-                \node[below right] at (A) {$A$};
-                \node[above right = 4pt and -10pt] at (B) {$B$};
-                \node[below] at (O) {$C$};
-            \end{tikzpicture}
-            \caption{Unit circle showing angle $\theta$, radius $r$, arclength $s$, and a right triangle.}
-            \label{anglemeasure}
-        \end{figure}
+        % Labels
+        \node[below right] at (A) {$A$};
+        \node[above right = 4pt and -10pt] at (B) {$B$};
+        \node[below] at (O) {$C$};
+    \end{tikzpicture}
+    \caption{Unit circle showing angle $\theta$, radius $r$, arclength $s$, and a right triangle.}
+    \label{anglemeasure}
+\end{figure}
 
-        The main two trigonometric functions $f(x) = \sin(x)$ and $f(x) = \cos(x)$, unlike the previously mentioned functions, have restricted ranges as their values vary within the interval $[-1,1]$. Their graphs can be seen in Figure \ref{fig:triggraph}.
+The main two trigonometric functions $f(x) = \sin(x)$ and $f(x) = \cos(x)$, unlike the previously mentioned functions, have restricted ranges as their values vary within the interval $[-1,1]$. Their graphs can be seen in Figure \ref{fig:triggraph}.
 
-        \medskip
+\medskip
 
-        \begin{figure}
-            \centering
-            \begin{tikzpicture}
-                \begin{axis}[
-                        xmin=-2*pi, xmax=2*pi,
-                        ymin=-1.5, ymax=1.5,
-                        axis lines=middle,
-                        xlabel=$x$,
-                        ylabel=$y$,
-                        legend pos=outer north east,
-                        trig format plots=rad,
-                    ]
-                    \addplot[color=red, samples=100,domain=-2*pi:2*pi] {sin(x)};
-                    \addplot[color=blue, samples=100,domain=-2*pi:2*pi] {cos(x)};
-                    \legend{$sin(x)$,$cos(x)$}
-                \end{axis}
-            \end{tikzpicture}
-            \caption{Graphs of $\sin(x)$ and $\cos(x)$}
-            \label{fig:triggraph}
-        \end{figure}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                xmin=-2*pi, xmax=2*pi,
+                ymin=-1.5, ymax=1.5,
+                axis lines=middle,
+                xlabel=$x$,
+                ylabel=$y$,
+                legend pos=outer north east,
+                trig format plots=rad,
+            ]
+            \addplot[color=red, samples=100,domain=-2*pi:2*pi] {sin(x)};
+            \addplot[color=blue, samples=100,domain=-2*pi:2*pi] {cos(x)};
+            \legend{$sin(x)$,$cos(x)$}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Graphs of $\sin(x)$ and $\cos(x)$}
+    \label{fig:triggraph}
+\end{figure}
 
-        From the basic trigonometric functions, an additional function $f(x) = \tan(x)$ can be constructed with the following formula
+From the basic trigonometric functions, an additional function $f(x) = \tan(x)$ can be constructed with the following formula
 
-        \begin{equation}
-            \tan(x) = \frac{\sin(x)}{\cos(x)}
-        \end{equation}
+\begin{equation}
+    \tan(x) = \frac{\sin(x)}{\cos(x)}
+\end{equation}
 
-        The domain of the trigonometric \textbf{tangent}\index{function!trigonometric!tangent} function is determined by the $\cos(x)$ in the denominator, where $\cos(x) = 0$ there is a vertical asymptote though it is still periodic. These asymptotes occur at $x = \frac{\pi}{2} + k\pi$ where $n \in \Z$. The graph of $\tan(x)$ can be seen in Figure \ref{fig:tangentgraph}.
+The domain of the trigonometric \textbf{tangent}\index{function!trigonometric!tangent} function is determined by the $\cos(x)$ in the denominator, where $\cos(x) = 0$ there is a vertical asymptote though it is still periodic. These asymptotes occur at $x = \frac{\pi}{2} + k\pi$ where $n \in \Z$. The graph of $\tan(x)$ can be seen in Figure \ref{fig:tangentgraph}.
 
-        \begin{figure}
-            \centering
-            \begin{tikzpicture}
-                \begin{axis}[
-                        xmin=-2*pi, xmax=2*pi,
-                        ymin=-4, ymax=4,
-                        axis lines=middle,
-                        xlabel=$x$,
-                        ylabel=$y$,
-                        xtick={-2*pi, -3*pi/2, -pi, -pi/2, 0, pi/2, pi, 3*pi/2, 2*pi},
-                        xticklabels={$-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$},
-                        ytick={-4,-3,...,4},
-                        legend pos=north east,
-                        trig format plots=rad,
-                        samples=100,
-                        unbounded coords=jump
-                    ]
-                    % \addplot[color=black]{tan(x)};
-                    \foreach \k in {-3,-2,...,3} {
-                        \pgfmathsetmacro{\start}{\k*pi-1.5}
-                        \pgfmathsetmacro{\end}  {\k*pi+1.5}
-                        \addplot[color=black, domain=\start:\end, samples=50]{tan(x)};
-                        \addplot[color=red, dashed, domain=-5:5] coordinates {({\k*pi + pi/2}, -5) ({\k*pi + pi/2}, 5)};
-                    }
-                    % \legend{$\tan(x)$, Asymptotes}
-                \end{axis}
-            \end{tikzpicture}
-            \caption{Graph of $\tan(x)$ with vertical asymptotes at $x = \frac{\pi}{2} + k\pi$}
-            \label{fig:tangentgraph}
-        \end{figure}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                xmin=-2*pi, xmax=2*pi,
+                ymin=-4, ymax=4,
+                axis lines=middle,
+                xlabel=$x$,
+                ylabel=$y$,
+                xtick={-2*pi, -3*pi/2, -pi, -pi/2, 0, pi/2, pi, 3*pi/2, 2*pi},
+                xticklabels={$-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$},
+                ytick={-4,-3,...,4},
+                legend pos=north east,
+                trig format plots=rad,
+                samples=100,
+                unbounded coords=jump
+            ]
+            % \addplot[color=black]{tan(x)};
+            \foreach \k in {-3,-2,...,3} {
+                \pgfmathsetmacro{\start}{\k*pi-1.5}
+                \pgfmathsetmacro{\end}  {\k*pi+1.5}
+                \addplot[color=black, domain=\start:\end, samples=50]{tan(x)};
+                \addplot[color=red, dashed, domain=-5:5] coordinates {({\k*pi + pi/2}, -5) ({\k*pi + pi/2}, 5)};
+            }
+            % \legend{$\tan(x)$, Asymptotes}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Graph of $\tan(x)$ with vertical asymptotes at $x = \frac{\pi}{2} + k\pi$}
+    \label{fig:tangentgraph}
+\end{figure}
 
-        As noted with the sine, cosine, and tangent functions, these are periodic, meaning they identically repeat after a set period, this is further discussed in Section \ref{sect:periodic functions}.
+As noted with the sine, cosine, and tangent functions, these are periodic, meaning they identically repeat after a set period, this is further discussed in Section \ref{sect:periodic functions}.
 
-        \subsection{Exponential and Logarithmic Functions}
-        \label{sect:explog}
-        The last family of functions we are going to present in this section are the \textbf{exponential} and \textbf{logarithmic}functions.
+\subsection{Exponential and Logarithmic Functions}\label{sect:exponential and logarithmic functions}
+The last family of functions we are going to present in this section are the \textbf{exponential} and \textbf{logarithmic}functions.
 
-        \begin{definition}
-            Functions of the form
-            \begin{equation}
-                f(x) = a^x
-            \end{equation}
+\begin{definition}
+    Functions of the form
+    \begin{equation}
+        f(x) = a^x
+    \end{equation}
 
-            where $a$ is the base, are called \textbf{exponential}\index{function!exponential} functions. Their domain is $(-\infty,\infty)$ and range is $(0,\infty)$.
-        \end{definition}
+    where $a$ is the base, are called \textbf{exponential}\index{function!exponential} functions. Their domain is $(-\infty,\infty)$ and range is $(0,\infty)$.
+\end{definition}
 
-        Logarithmic are inverses (discussed in Section \ref{sect:periodic functions}) of exponents such that
+Logarithmic are inverses (discussed in Section \ref{sect:periodic functions}) of exponents such that
 
-        \begin{equation}
-            \log_a(a^x) = x
-        \end{equation}
+\begin{equation}
+    \log_a(a^x) = x
+\end{equation}
 
-        \noindent where $a$ is the base of the logarithm. Logarithms essentially compute the power required to bring the base to a specified number. For example $log_2(4) = 2$ and $log_3(81) = 4$.
+\noindent where $a$ is the base of the logarithm. Logarithms essentially compute the power required to bring the base to a specified number. For example $log_2(4) = 2$ and $log_3(81) = 4$.
 
-        \begin{definition}
-            Functions of the form
+\begin{definition}
+    Functions of the form
 
-            \begin{equation}
-                f(x) = \log_a(x)
-            \end{equation}
+    \begin{equation}
+        f(x) = \log_a(x)
+    \end{equation}
 
-            where $a$ is the base, are called \textbf{logarithmic}\index{function!logarithmic} functions. The domain for the logarithm is $(0,\infty)$ and the range is $(-\infty,\infty)$.
-        \end{definition}
+    where $a$ is the base, are called \textbf{logarithmic}\index{function!logarithmic} functions. The domain for the logarithm is $(0,\infty)$ and the range is $(-\infty,\infty)$.
+\end{definition}
 
-        The graphs of exponents and logarithms with various bases are shown in Figure \ref{fig:exploggraphs}.
+The graphs of exponents and logarithms with various bases are shown in Figure \ref{fig:exploggraphs}.
 
-        \medskip
+\medskip
 
-        \begin{figure}
-            \centering
-            \begin{tikzpicture}
-                \begin{axis}[
-                        xmin=-3, xmax=3,
-                        ymin=-3, ymax=3,
-                        axis lines=middle,
-                        xlabel=$x$,
-                        ylabel=$y$,
-                        legend pos=outer north east,
-                        trig format plots=rad,
-                        domain=-3:3,
-                    ]
-                    \addplot[color=red, samples=100] {2^x};
-                    \addplot[color=red,dashed, samples=100] {log2(x)};
-                    \addplot[color=green, samples=100] {3^x};
-                    \addplot[color=green, dashed,samples=100] {ln(x)/ln(3)};
-                    \addplot[color=blue, samples=100] {4^x};
-                    \addplot[color=blue, dashed,samples=100] {ln(x)/ln(4)};
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                xmin=-3, xmax=3,
+                ymin=-3, ymax=3,
+                axis lines=middle,
+                xlabel=$x$,
+                ylabel=$y$,
+                legend pos=outer north east,
+                trig format plots=rad,
+                domain=-3:3,
+            ]
+            \addplot[color=red, samples=100] {2^x};
+            \addplot[color=red,dashed, samples=100] {log2(x)};
+            \addplot[color=green, samples=100] {3^x};
+            \addplot[color=green, dashed,samples=100] {ln(x)/ln(3)};
+            \addplot[color=blue, samples=100] {4^x};
+            \addplot[color=blue, dashed,samples=100] {ln(x)/ln(4)};
 
-                    \legend{$f(x)=2^x$,$f(x)=log_2(x)$,$f(x)=3^x$,$f(x)=log_3(x)$,$f(x)=4^x$,$f(x)=log_4(x)$,}
-                \end{axis}
-            \end{tikzpicture}
-            \caption{Graphs of Exponential and Logarithmic Functions with various bases, $f(x) = a^x$ and $f(x) = log_a(x)$ for $a \in \{2,3,4\}$.}
-            \label{fig:exploggraphs}
-        \end{figure}
+            \legend{$f(x)=2^x$,$f(x)=log_2(x)$,$f(x)=3^x$,$f(x)=log_3(x)$,$f(x)=4^x$,$f(x)=log_4(x)$,}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Graphs of Exponential and Logarithmic Functions with various bases, $f(x) = a^x$ and $f(x) = log_a(x)$ for $a \in \{2,3,4\}$.}
+    \label{fig:exploggraphs}
+\end{figure}
 
-        Special exponential and logarithmic functions have the base of $e \approx 2.71828...$\index{Euler's Number} which is Euler's number. This results in the following functions $f(x) = e^x$ for the exponential and using special notation $f(x) = \log_e(x)=\ln(x)$ and of course $\ln(e^x)=x$. These functions show up in numerous real world situations such as exponential growth/decay and sound decibels.
+Special exponential and logarithmic functions have the base of $e \approx 2.71828...$\index{Euler's Number} which is Euler's number. This results in the following functions $f(x) = e^x$ for the exponential and using special notation $f(x) = \log_e(x)=\ln(x)$ and of course $\ln(e^x)=x$. These functions show up in numerous real world situations such as exponential growth/decay and sound decibels.
 
-        \begin{example}
-            Exponential growth and decay take the form of $f(x) = a(1+r)^x$, where $a$ is the initial amount, $r$ is the growth rate, and $x$ is the time interval. Growth is modeled with a positive $r > 0$ and decay with a negative $r < 0$. Choosing $a = 100$ and $r = \pm 0.1$, results in the following growth and decay graphs in Figure \ref{fig:growthdecay}.
+\begin{example}
+    Exponential growth and decay take the form of $f(x) = a(1+r)^x$, where $a$ is the initial amount, $r$ is the growth rate, and $x$ is the time interval. Growth is modeled with a positive $r > 0$ and decay with a negative $r < 0$. Choosing $a = 100$ and $r = \pm 0.1$, results in the following growth and decay graphs in Figure \ref{fig:growthdecay}.
 
-            \begin{figure}
-                \centering
-                \begin{tikzpicture}
-                    \begin{axis}[
-                            xmin=0, xmax=50,
-                            ymin=0, ymax=250,
-                            axis lines=middle,
-                            xlabel=$x$,
-                            ylabel=$y$,
-                            legend pos=north east,
-                            trig format plots=rad,
-                            domain=0:50,
-                        ]
-                        \addplot[color=red, samples=100] {100*(1+0.1)^x};
-                        \addplot[color=blue, samples=100] {100*(1-0.1)^x};
-                        \legend{$f(x)=100(1.1)^x$,$f(x)=100(0.9)^x$}
-                    \end{axis}
-                \end{tikzpicture}
-                \caption{Graphs Showing Exponential Growth and Decay, $f(x)=100(1.1)^x$ and $f(x)=100(0.9)^x$}
-                \label{fig:growthdecay}
-            \end{figure}
-        \end{example}
+    \begin{figure}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                    xmin=0, xmax=50,
+                    ymin=0, ymax=250,
+                    axis lines=middle,
+                    xlabel=$x$,
+                    ylabel=$y$,
+                    legend pos=north east,
+                    trig format plots=rad,
+                    domain=0:50,
+                ]
+                \addplot[color=red, samples=100] {100*(1+0.1)^x};
+                \addplot[color=blue, samples=100] {100*(1-0.1)^x};
+                \legend{$f(x)=100(1.1)^x$,$f(x)=100(0.9)^x$}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Graphs Showing Exponential Growth and Decay, $f(x)=100(1.1)^x$ and $f(x)=100(0.9)^x$}
+        \label{fig:growthdecay}
+    \end{figure}
+\end{example}
 
-        \begin{example}
-            An example of logarithms being used for modeling real world phenomena is the pH scale in chemistry $pH(H^+) = log_{10}(H^+)$ where $H^+$ is the number of hydrogen ions are in a solution. This essentially determines the order of magnitude (exponent of 10) of the number of hydrogen ions there are. The graph of this function is shown in Figure \ref{fig:pHgraph}.
+\begin{example}
+    An example of logarithms being used for modeling real world phenomena is the pH scale in chemistry $pH(H^+) = log_{10}(H^+)$ where $H^+$ is the number of hydrogen ions are in a solution. This essentially determines the order of magnitude (exponent of 10) of the number of hydrogen ions there are. The graph of this function is shown in Figure \ref{fig:pHgraph}.
 
-            \begin{figure}
-                \centering
-                \begin{tikzpicture}
-                    \begin{axis}[
-                            xmin=0, xmax=25,
-                            ymin=-2, ymax=2,
-                            axis lines=middle,
-                            xlabel=$x$,
-                            ylabel=$y$,
-                            legend pos=north east,
-                            trig format plots=rad,
-                            domain=0.0001:25,
-                        ]
-                        \addplot[color=red, samples=100] {log10(x)};
-                    \end{axis}
-                \end{tikzpicture}
-                \caption{Graph Showing the pH Scale, $pH(H^+) = log_{10}(H^+)$}
-                \label{fig:pHgraph}
-            \end{figure}
+    \begin{figure}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                    xmin=0, xmax=25,
+                    ymin=-2, ymax=2,
+                    axis lines=middle,
+                    xlabel=$x$,
+                    ylabel=$y$,
+                    legend pos=north east,
+                    trig format plots=rad,
+                    domain=0.0001:25,
+                ]
+                \addplot[color=red, samples=100] {log10(x)};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Graph Showing the pH Scale, $pH(H^+) = log_{10}(H^+)$}
+        \label{fig:pHgraph}
+    \end{figure}
 
-            % TODO: check this
-        \end{example}
-        % \subsection{Systems of Equations}
+    % TODO: check this
+\end{example}
+% \subsection{Systems of Equations}
 
-        \section{Types of Functions}\label{sect:types of functions}
-        It is important to be able to further distinguish functions and classify their behaviors into distinct characteristics in order to properly analyze them. Characteristics such as symmetry (evenness and oddness of a function) and periodicity (repeating functions) are defined in such ways that may give insight into solving certain problems or giving us the opportunity to exploit their definitions.
+\section{Types of Functions}\label{sect:types of functions}
 
-        \subsection{Piecewise Functions and Absolute Values}
-        \label{sect:piecewise functions and absolute values}
-        \textbf{Piecewise functions}\index{function!piecewise} are formed with multiple functions on separate intervals for the domain. For example, in a rational function with holes, $g(x) = \frac{(x+1)(x-1)}{(x+1)}$ the hole at $x = -1$ can be "plugged" with a piecewise function
+It is important to be able to further distinguish functions and classify their behaviors into distinct characteristics in order to properly analyze them.
+Characteristics such as symmetry (evenness and oddness of a function) and periodicity (repeating functions) are defined in such ways that may give insight into solving certain problems or giving us the opportunity to exploit their definitions.
 
-        $$
-        f(x) =
-        \begin{cases}
-            g(x) = \frac{(x+1)(x-1)}{(x+1)} & \text{if } x \neq -1 \\
-            -2 & \text{if } x = -1
-        \end{cases}
-        $$
+\subsection{Piecewise Functions and Absolute Values}\label{sect:piecewise functions and absolute values}
 
-        An important type of piecewise function is the \textbf{absolute value}\index{function!piecewise!absolute value} defined as
+\textbf{Piecewise functions}\index{function!piecewise} are formed with multiple functions on separate intervals for the domain.
+For example, in a rational function with holes, $g(x) = \frac{(x+1)(x-1)}{(x+1)}$ the hole at $x = -1$ can be "plugged" with a piecewise function
 
-        \begin{equation}
-            |x| =
-            \begin{cases}
-                x & \text{if } x >= 0 \\
-                -x & \text{if } x < 0
-            \end{cases}
-        \end{equation}
+$$
+f(x) =
+\begin{cases}
+    g(x) = \frac{(x+1)(x-1)}{(x+1)} & \text{if } x \neq -1 \\
+    -2 & \text{if } x = -1
+\end{cases}
+$$
 
-        \noindent This returns a positive value for all inputs so the range is $[0,\infty)$. The absolute value is important as it allows us to define a notion of \textbf{distance}\index{distance} between numbers. For example take $a = 10$ and $b = 3$, the distance between $a$ and $b$ is
+An important type of piecewise function is the \textbf{absolute value}\index{function!piecewise!absolute value} defined as
 
-        \begin{equation}
-            d = |b - a| = |3 - 10| = |-7| = 7
-        \end{equation}
+\begin{equation}\label{eqn:absolute value}
+    |x| =
+    \begin{cases}
+        x & \text{if } x >= 0 \\
+        -x & \text{if } x < 0
+    \end{cases}
+\end{equation}
 
-        \noindent so $a$ is $7$ units away from $b$. The absolute value has the property $|ab| = |a||b|$ and the \textbf{triangle inequality}\index{triangle inequality} with the following definition
+\noindent The absolute value returns a positive value for all inputs so the range is $[0,\infty)$. The absolute value is important as it allows us to define a notion of \textbf{distance}\index{distance} between numbers. For example take $a = 10$ and $b = 3$, the distance between $a$ and $b$ is
 
-        \begin{definition}
-            The \textbf{Triangle Inequality}
+$$
+d = |b - a| = |3 - 10| = |-7| = 7
+$$
 
-            \begin{aequation}
-                |a+b| &\leq |a| + |b| \\
-                |(a-c)+(c-b)| = |a-b| &\leq |a-c| + |c-b|
-            \end{aequation}
-        \end{definition}
+\noindent so $a$ is $7$ units away from $b$. The absolute value has the property $|ab| = |a||b|$ and the \textbf{triangle inequality}\index{triangle inequality} with the following definition
 
-        \noindent This states that the distance from point $a$ to point $b$ is less or equal to that of the distance from $a$ to a point $c$ and then from the point $c$ to the point $b$ (this may make more sense in higher dimensions discussed later).
+\begin{definition}\label{def:triangle inequality}
+    The \textbf{Triangle Inequality}
 
-        \subsection{Even and Odd Functions}\label{sect:even and odd functions}
-        Function symmetry
-        \begin{definition}
-            A function $f(x)$ is said to be an \textbf{even function}\index{function!even} of the independent variable $x$ if and only if
-            $$
-            f(-x) = f(x)
-            $$
-            for all $x$ in the function's domain.
-        \end{definition}
+    \begin{aequation}
+        |a+b| &\leq |a| + |b| \\
+        |(a-c)+(c-b)| = |a-b| &\leq |a-c| + |c-b|
+    \end{aequation}
+\end{definition}
 
-        \begin{definition}
-            A function $f(x)$ is said to be an \textbf{odd function}\index{function!odd} of the independent variable $x$ if and only if
-            $$
-            f(-x) = -f(x)
-            $$
-            for all $x$ in the function's domain.
-        \end{definition}
+\noindent This states that the distance from point $a$ to point $b$ is less or equal to that of the distance from $a$ to a point $c$ and then from the point $c$ to the point $b$. This may make more sense in higher dimensions where vector addition forms triangles, see Chapter \ref{chap:elementary linear algebra}.
 
-        \subsection{Increasing and Decreasing Functions}
-        \begin{definition}
-            A function $f$ is \textbf{increasing}\index{function!increasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
-            $$
-            f(x_1) \leq f(x_2).
-            $$
-            If the inequality is strict ($f(x_1) < f(x_2)$), we say $f$ is \textbf{strictly increasing}\index{function!strictly increasing}.
-        \end{definition}
+\subsection{Even and Odd Functions}\label{sect:even and odd functions}
 
-        \begin{definition}
-            A function $f$ is \textbf{decreasing}\index{function!decreasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
-            $$
-            f(x_1) \geq f(x_2).
-            $$
-            If the inequality is strict ($f(x_1) > f(x_2)$), we say $f$ is \textbf{strictly decreasing}\index{function!strictly decreasing}.
-        \end{definition}
+Function symmetry is a useful classification for functions especially once integration is introduced in Part \ref{part:integral calculus}. Function symmetry is divided into two classes, even functions and odd functions with their definitions following.
 
-        \subsection{Periodic Functions}
-        \label{sect:periodic functions}
-        \begin{definition}
-            A function is said to be a \textbf{period function}\index{function!periodic} if and only if for some value $a$,
-            $$
-            f(x) = f(x+a)
-            $$
-            where $a$ is the period of the function. The period defines the magnitude of the independent variable required for the function to repeat.
-        \end{definition}
+\begin{definition}
+    A function $f(x)$ is said to be an \textbf{even function}\index{function!even} of the independent variable $x$ if and only if
+    $$
+    f(-x) = f(x)
+    $$
+    for all $x$ in the function's domain.
+\end{definition}
 
-        \section{Function Transformations and Operations}
-        \label{sect:function transformations and operations}
-        \subsection{Function Arithmetic}
-        \label{sect:function arithmetic}
-        \subsection{Function Translation}
-        \label{sect:function translation}
-        \subsection{Function Composition}
-        \label{sect:function composition}
-        \subsection{Function Inverses}
-        \label{sect:function inverses}
+\begin{definition}
+    A function $f(x)$ is said to be an \textbf{odd function}\index{function!odd} of the independent variable $x$ if and only if
+    $$
+    f(-x) = -f(x)
+    $$
+    for all $x$ in the function's domain.
+\end{definition}
+
+A simple example of an even function is the cosine function $f(x) = \cos(x)$ and an example of an odd function is the sine function $f(x) = \sin(x)$ whose graphs can be seen in Figure \ref{fig:triggraph}. Graphically, even functions symmetric about the vertical axis while odd functions hold rotational symmetry when rotating the function $180^\circ$ about the origin. To further reinforce the symmetry of odd functions Example\ref{oddfunctionsymmetry}.
+
+\begin{example}\label{oddfunctionsymmetry}
+    Consider the function $f(x) = x^3$. To rotate the function $180^\circ$ about the origin, we set $x = -x$ and $y = -y$ such that every point $(x,y)$ is mapped to $(-x,-y)$. This gives us $g(x) = -f(-x) = -(-(x)^3) = x^3$, which matches the original function. 
+\end{example}
+
+\subsection{Increasing and Decreasing Functions}\label{sect:increasing and decreasing functions}
+
+
+
+\begin{definition}
+    A function $f$ is \textbf{increasing}\index{function!increasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
+    $$
+    f(x_1) \leq f(x_2).
+    $$
+    If the inequality is strict ($f(x_1) < f(x_2)$), we say $f$ is \textbf{strictly increasing}\index{function!strictly increasing}.
+\end{definition}
+
+\begin{definition}
+    A function $f$ is \textbf{decreasing}\index{function!decreasing} on an interval $I$ if for all $x_1, x_2 \in I$ with $x_1 < x_2$,
+    $$
+    f(x_1) \geq f(x_2).
+    $$
+    If the inequality is strict ($f(x_1) > f(x_2)$), we say $f$ is \textbf{strictly decreasing}\index{function!strictly decreasing}.
+\end{definition}
+
+\subsection{Periodic Functions}\label{sect:periodic functions}
+
+\begin{definition}
+    A function is said to be a \textbf{period function}\index{function!periodic} if and only if for some value $a$,
+    $$
+    f(x) = f(x+a)
+    $$
+    where $a$ is the period of the function. The period defines the magnitude of the independent variable required for the function to repeat.
+\end{definition}
+
+\section{Function Transformations and Operations}\label{sect:function transformations and operations}
+
+\subsection{Function Arithmetic}\label{sect:function arithmetic}
+
+\subsection{Function Translation}\label{sect:function translation}
+
+\subsection{Function Composition}\label{sect:function composition}
+
+\subsection{Function Inverses}\label{sect:function inverses}
